@@ -4,7 +4,7 @@ angular.module('app')
 	.controller('AppController', []);
 
 angular.module('app')
-	.config(function($routeProvider, $locationProvider){
+	.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
 		$routeProvider.when('/about', {
 			templateUrl: 'templates/pages/about/index.html'
 		})
@@ -15,4 +15,4 @@ angular.module('app')
 
 		$locationProvider.html5Mode(true);
 
-});
+}]);

@@ -13,6 +13,6 @@ angular.module('app')
 		})
 		.otherwise({redirectTo: '/'});
 
-		$locationProvider.html5mode(true);
+		$locationProvider.html5Mode(true);
 
 });

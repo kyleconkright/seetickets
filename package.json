@@ -1,0 +1,8 @@
+{
+  "name": "see-tickets",
+  "main": "server.js",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-ruby-sass": "^2.0.6"
+  }
+}

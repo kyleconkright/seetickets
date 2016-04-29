@@ -5,6 +5,9 @@ angular.module('app')
 
 angular.module('app')
 	.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
+
+		$locationProvider.html5Mode(true);
+
 		$routeProvider.when('/about', {
 			templateUrl: 'templates/pages/about/index.html'
 		})
@@ -12,7 +15,5 @@ angular.module('app')
 			templateUrl: 'templates/pages/contact/index.html'
 		})
 		.otherwise({redirectTo: '/'});
-
-		$locationProvider.html5Mode(true);
 
 }]);

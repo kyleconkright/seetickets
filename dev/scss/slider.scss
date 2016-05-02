@@ -1,0 +1,9 @@
+ul.slider {
+	background: black;
+	li {
+		background: teal;
+	}
+	li:nth-of-type(2n) {
+		background: blue;
+	}
+}

@@ -2,18 +2,32 @@
 <html ng-app="app">
 <head>
 	<base href="/app" />
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
-    <script src="js/vendor/angular-routes.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="js/vendor.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
-	<title>See Tickers</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/script.js"></script>
+	<title>See Tickets</title>
+	<link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
 <body>
-<nav>
-	<a href="/about">about</a>
-	<a href="/contact">contact</a>
-</nav>
-<div ng-view></div>
+
+	<nav ng-controller="NavController">
+		<div class="container">
+			<a href="/" my-active-link="/"><!--<img src="assets/st-logo.png">-->See Tickets</a>
+			<a href="/about" my-active-link="/about">about</a>
+			<a href="/contact" my-active-link="/contact">contact</a>
+		</div>
+	</nav>
+
+	<div ng-view></div>
+
+
+	<footer>
+		
+	</footer>
+
+
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
 </body>
 </html>

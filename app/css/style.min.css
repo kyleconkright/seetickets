@@ -1,3 +1,75 @@
+.bottom-nav {
+  background: #041928;
+  color: #EEEEEE;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 2rem 0; }
+  .bottom-nav footer .container {
+    display: flex; }
+    @media (max-width: 414px) {
+      .bottom-nav footer .container {
+        flex-direction: column; } }
+    .bottom-nav footer .container div.address {
+      font-size: .8em;
+      color: #939393; }
+      .bottom-nav footer .container div.address address {
+        font-style: normal;
+        margin: 0.5rem 0; }
+    .bottom-nav footer .container a.logo {
+      background: url("../assets/st-logo.png") no-repeat;
+      background-size: contain;
+      width: 100px;
+      height: 16px;
+      display: inline-block; }
+    .bottom-nav footer .container ul {
+      margin: 0 0 0 2rem;
+      padding: 0 0 0 2rem;
+      border-left: 1px solid #717171; }
+      @media (max-width: 414px) {
+        .bottom-nav footer .container ul {
+          border: none;
+          padding: 0;
+          margin: 0; } }
+    .bottom-nav footer .container a {
+      text-transform: uppercase;
+      font-size: .9em;
+      font-weight: 300; }
+    .bottom-nav footer .container a.active {
+      font-weight: 400; }
+
+div.top-nav nav {
+  padding: 1rem 0; }
+  div.top-nav nav .container {
+    display: flex;
+    align-items: center; }
+    div.top-nav nav .container * {
+      flex: 1; }
+    div.top-nav nav .container a {
+      margin: 0;
+      text-transform: uppercase;
+      font-size: .9em;
+      font-weight: 400;
+      letter-spacing: .025em; }
+    div.top-nav nav .container a.logo {
+      background: url("../assets/see-logo-dark.png") no-repeat;
+      background-size: contain;
+      width: 50px;
+      height: 22px;
+      display: inline-block; }
+    div.top-nav nav .container .menu {
+      text-align: right; }
+      div.top-nav nav .container .menu a {
+        margin: 0 0 0 5px; }
+      div.top-nav nav .container .menu a.active {
+        color: #0c9a9a; }
+  div.top-nav nav.light {
+    background: #041928;
+    color: #EEEEEE; }
+    div.top-nav nav.light a.logo {
+      background: url("../assets/see-logo.png") no-repeat;
+      background-size: contain; }
+
 * {
   padding: 0;
   margin: 0;
@@ -22,6 +94,13 @@ body {
   @media (max-width: 414px) {
     .container {
       width: 95%; } }
+
+ul.slider {
+  background: yellow; }
+  ul.slider li {
+    background: teal; }
+  ul.slider li:nth-of-type(2n) {
+    background: blue; }
 
 /* Slider */
 .slick-slider {
@@ -96,68 +175,3 @@ body {
 
 .slick-arrow.slick-hidden {
   display: none; }
-
-div.top-nav nav {
-  padding: 1rem 0; }
-  div.top-nav nav .container {
-    display: flex;
-    align-items: center; }
-    div.top-nav nav .container * {
-      flex: 1; }
-    div.top-nav nav .container a {
-      margin: 0;
-      text-transform: uppercase;
-      font-size: .9em;
-      font-weight: 400;
-      letter-spacing: .025em; }
-    div.top-nav nav .container a.logo {
-      background: url("../assets/see-logo-dark.png") no-repeat;
-      background-size: contain;
-      width: 50px;
-      height: 22px;
-      display: inline-block; }
-    div.top-nav nav .container .menu {
-      text-align: right; }
-      div.top-nav nav .container .menu a {
-        margin: 0 0 0 5px; }
-      div.top-nav nav .container .menu a.active {
-        color: #0c9a9a; }
-  div.top-nav nav.light {
-    background: #041928;
-    color: #EEEEEE; }
-    div.top-nav nav.light a.logo {
-      background: url("../assets/see-logo.png") no-repeat;
-      background-size: contain; }
-
-ul.slider {
-  background: black; }
-  ul.slider li {
-    background: teal; }
-  ul.slider li:nth-of-type(2n) {
-    background: blue; }
-
-.bottom-nav {
-  background: #041928;
-  color: #EEEEEE;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 2rem 0; }
-  .bottom-nav footer .container {
-    display: flex; }
-    .bottom-nav footer .container * {
-      flex: 1; }
-    .bottom-nav footer .container div.home {
-      flex: .2; }
-    .bottom-nav footer .container a.logo {
-      background: url("../assets/see-logo.png") no-repeat;
-      background-size: contain;
-      width: 50px;
-      height: 22px;
-      display: inline-block; }
-    .bottom-nav footer .container a {
-      text-transform: uppercase;
-      font-size: .9em;
-      font-weight: 300; }
-    .bottom-nav footer .container a.active {
-      font-weight: 400; }

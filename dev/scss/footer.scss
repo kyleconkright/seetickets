@@ -11,18 +11,33 @@
 	footer {
 		.container {
 			display: flex;
-			* {
-				flex: 1;
+			@include mobile {
+				flex-direction: column;
 			}
-			div.home {
-				flex: .2;
+			div.address {
+				font-size: .8em;
+				color: $lightGrey*.65;
+				address {
+					font-style: normal;
+					margin: $space/2 0;
+				}
 			}
 			a.logo {
-				background: url('../assets/see-logo.png') no-repeat;
+				background: url('../assets/st-logo.png') no-repeat;
 				background-size: contain;
-				width: 50px;
-				height: 22px;
+				width: 100px;
+				height: 16px;
 				display: inline-block;
+			}
+			ul {
+				margin: 0 0 0 $space*2;
+				padding: 0 0 0 $space*2;
+				border-left: 1px solid $lightGrey*.5;
+				@include mobile {
+					border: none;
+					padding: 0;
+					margin: 0;
+				}
 			}
 			a {
 				text-transform: uppercase;

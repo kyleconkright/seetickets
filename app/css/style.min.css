@@ -38,38 +38,6 @@
     .bottom-nav footer .container a.active {
       font-weight: 400; }
 
-div.top-nav nav {
-  padding: 1rem 0; }
-  div.top-nav nav .container {
-    display: flex;
-    align-items: center; }
-    div.top-nav nav .container * {
-      flex: 1; }
-    div.top-nav nav .container a {
-      margin: 0;
-      text-transform: uppercase;
-      font-size: .9em;
-      font-weight: 400;
-      letter-spacing: .025em; }
-    div.top-nav nav .container a.logo {
-      background: url("../assets/see-logo-dark.png") no-repeat;
-      background-size: contain;
-      width: 50px;
-      height: 22px;
-      display: inline-block; }
-    div.top-nav nav .container .menu {
-      text-align: right; }
-      div.top-nav nav .container .menu a {
-        margin: 0 0 0 5px; }
-      div.top-nav nav .container .menu a.active {
-        color: #0c9a9a; }
-  div.top-nav nav.light {
-    background: #041928;
-    color: #EEEEEE; }
-    div.top-nav nav.light a.logo {
-      background: url("../assets/see-logo.png") no-repeat;
-      background-size: contain; }
-
 * {
   padding: 0;
   margin: 0;
@@ -94,13 +62,6 @@ body {
   @media (max-width: 414px) {
     .container {
       width: 95%; } }
-
-ul.slider {
-  background: yellow; }
-  ul.slider li {
-    background: teal; }
-  ul.slider li:nth-of-type(2n) {
-    background: blue; }
 
 /* Slider */
 .slick-slider {
@@ -175,3 +136,44 @@ ul.slider {
 
 .slick-arrow.slick-hidden {
   display: none; }
+
+div.top-nav nav {
+  padding: 1rem 0;
+  border-bottom: 1px solid #E6E6E6; }
+  div.top-nav nav .container {
+    display: flex;
+    align-items: center; }
+    div.top-nav nav .container * {
+      flex: 1; }
+    div.top-nav nav .container a {
+      margin: 0;
+      text-transform: uppercase;
+      font-size: .9em;
+      font-weight: 400;
+      letter-spacing: .025em; }
+    div.top-nav nav .container a.logo {
+      background: url("../assets/see-logo-dark.png") no-repeat;
+      background-size: contain;
+      width: 50px;
+      height: 22px;
+      display: inline-block; }
+    div.top-nav nav .container .menu {
+      text-align: right; }
+      div.top-nav nav .container .menu a {
+        margin: 0 0 0 5px; }
+      div.top-nav nav .container .menu a.active {
+        color: #0c9a9a; }
+  div.top-nav nav.light {
+    background: #041928;
+    color: #EEEEEE;
+    border: none; }
+    div.top-nav nav.light a.logo {
+      background: url("../assets/see-logo.png") no-repeat;
+      background-size: contain; }
+
+ul.slider {
+  background: yellow; }
+  ul.slider li {
+    background: teal; }
+  ul.slider li:nth-of-type(2n) {
+    background: blue; }

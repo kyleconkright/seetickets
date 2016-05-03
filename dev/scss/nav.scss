@@ -4,6 +4,7 @@
 div.top-nav {
 	nav {
 		padding: $space 0;
+		border-bottom: 1px solid $lightBorder;
 		.container {
 			display: flex;
 			align-items: center;
@@ -40,6 +41,7 @@ div.top-nav {
 		&.light {
 			background: $brandDark2;
 			color: $lighterGrey;
+			border: none;
 			a.logo {
 				background: url('../assets/see-logo.png') no-repeat;
 				background-size: contain;

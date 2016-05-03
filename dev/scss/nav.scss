@@ -1,5 +1,13 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
 nav {
+	padding: $space 0;
 	a.active {
 		color: #0c9a9a;
+	}
+	&.light {
+		background: $brandDark2;
+		color: $lighterGrey;
 	}
 }

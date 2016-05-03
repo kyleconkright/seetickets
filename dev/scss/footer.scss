@@ -1,5 +1,8 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
 footer {
-	background: #001926;
+	background: $brandDark2;
 	padding: 6% 1%;
 	position: absolute;
 	bottom: 0;

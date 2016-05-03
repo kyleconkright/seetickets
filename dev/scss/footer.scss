@@ -1,10 +1,37 @@
 @import 'mixins.scss';
 @import 'variables.scss';
 
-footer {
+.bottom-nav {
 	background: $brandDark2;
-	padding: 6% 1%;
+	color: $lighterGrey;
 	position: absolute;
 	bottom: 0;
 	width: 100%;
+	padding: $space*2 0;
+	footer {
+		.container {
+			display: flex;
+			* {
+				flex: 1;
+			}
+			div.home {
+				flex: .2;
+			}
+			a.logo {
+				background: url('../assets/see-logo.png') no-repeat;
+				background-size: contain;
+				width: 50px;
+				height: 22px;
+				display: inline-block;
+			}
+			a {
+				text-transform: uppercase;
+				font-size: .9em;
+				font-weight: 300;
+			}
+			a.active {
+				font-weight: 400;
+			}
+		}
+	}
 }

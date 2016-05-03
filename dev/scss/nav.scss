@@ -1,36 +1,47 @@
 @import 'mixins.scss';
 @import 'variables.scss';
 
-nav {
-	padding: $space 0;
-	.container {
-		display: flex;
-		align-items: center;
-		a {
-			margin: 0 5px 0 0;
-			text-transform: uppercase;
-			font-size: .9em;
-			font-weight: 300;
+div.top-nav {
+	nav {
+		padding: $space 0;
+		.container {
+			display: flex;
+			align-items: center;
+			* {
+				flex: 1;
+			}
+			a {
+				margin: 0;
+				text-transform: uppercase;
+				font-size: .9em;
+				font-weight: 400;
+				letter-spacing: .025em;
+			}
+			a.logo {
+				background: url('../assets/see-logo-dark.png') no-repeat;
+				background-size: contain;
+				width: 50px;
+				height: 22px;
+				display: inline-block;
+			}
+			.menu {
+				text-align: right;
+				a {
+					margin: 0 0 0 5px;
+				}
+				a.active {
+					color: #0c9a9a;
+				}
+			}
+			
 		}
-		a.logo {
-			background: url('../assets/see-logo-dark.png') no-repeat;
-			background-size: contain;
-			width: 50px;
-			height: 22px;
-			display: inline-block;
-			position: relative;
-			top: -3px;
+		&.light {
+			background: $brandDark2;
+			color: $lighterGrey;
+			a.logo {
+				background: url('../assets/see-logo.png') no-repeat;
+				background-size: contain;
+			}
 		}
-		a.active {
-			color: #0c9a9a;
-		}
-	}
-	&.light {
-		background: $brandDark2;
-		color: $lighterGrey;
-		a.logo {
-			background: url('../assets/see-logo.png') no-repeat;
-			background-size: contain;
-		}
-	}
+	}	
 }

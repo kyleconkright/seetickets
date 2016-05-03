@@ -61,6 +61,15 @@ angular.module('app')
 		.when('/about', {
 			templateUrl: 'templates/pages/about/index.html'
 		})
+		.when('/solutions', {
+			templateUrl: 'templates/pages/solutions/index.html'
+		})
+		.when('/insights', {
+			templateUrl: 'templates/pages/insights/index.html'
+		})
+		.when('/clients', {
+			templateUrl: 'templates/pages/clients/index.html'
+		})
 		.when('/contact', {
 			templateUrl: 'templates/pages/contact/index.html'
 		})

@@ -51,6 +51,19 @@ angular.module('app')
 
 
 angular.module('app')
+	.directive('slickSlider',function($timeout){
+		return {
+			restrict: 'A',
+			link: function(scope,element,attrs) {
+				$timeout(function() {
+					$(element).slick(scope.$eval(attrs.slickSlider));
+				});
+			}
+		}
+	});
+
+
+angular.module('app')
 	.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
 
 		$locationProvider.html5Mode(true);

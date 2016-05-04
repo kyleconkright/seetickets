@@ -1,7 +1,12 @@
 ul.slider {
 	background: yellow;
+	position: relative;
+	top: -150px;
 	li {
 		background: teal;
+		img {
+			width: 100%;
+		}
 	}
 	li:nth-of-type(2n) {
 		background: blue;

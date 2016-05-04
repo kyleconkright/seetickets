@@ -4,9 +4,6 @@
 .bottom-nav {
 	background: $brandDark2;
 	color: $lighterGrey;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
 	padding: $space*2 0;
 	footer {
 		.container {
@@ -46,6 +43,18 @@
 			}
 			a.active {
 				font-weight: 400;
+			}
+			div.affiliates {
+				text-align: right;
+				flex: 1;
+				a.vivendi {
+					background: url('../assets/vivendi-white.png') no-repeat;
+					background-size: contain;
+					width: 100px;
+					height: 16px;
+					display: inline-block;
+					opacity: .5;
+				}
 			}
 		}
 	}

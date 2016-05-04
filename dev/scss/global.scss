@@ -1,4 +1,5 @@
 @import 'mixins.scss';
+@import 'variables.scss';
 
 * {
 	padding: 0;
@@ -20,6 +21,7 @@ body {
 .container {
 	width: 80%;
 	margin: 0 auto;
+	padding: $space 0;
 	@include tablet {
 		width: 90%;
 	}

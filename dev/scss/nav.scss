@@ -2,9 +2,11 @@
 @import 'variables.scss';
 
 div.top-nav {
+	position: relative;
+	z-index: 1000;
 	nav {
-		padding: $space 0;
 		border-bottom: 1px solid $lightBorder;
+		padding: $space/2 0;
 		.container {
 			display: flex;
 			align-items: center;
@@ -14,17 +16,19 @@ div.top-nav {
 			a {
 				margin: 0;
 				text-transform: uppercase;
-				font-size: .9em;
-				font-weight: 400;
-				letter-spacing: .025em;
-
+				font-size: .95em;
+				font-weight: 300;
+				letter-spacing: .045em;
+				transition: .3s all;
+				border: 1px solid transparent;
+				border-width: 0 0 1px 0;
+				padding: $space/4 0;
 			}
-			
 			a.logo {
 				background: url('../assets/see-logo-dark.png') no-repeat;
 				background-size: contain;
-				width: 50px;
-				height: 22px;
+				width: 70px;
+				height: 32px;
 				display: inline-block;
 			}
 			.menu {
@@ -34,12 +38,14 @@ div.top-nav {
 				}
 				a.active {
 					color: #0c9a9a;
+					border: 1px solid;
+					border-width: 0 0 1px 0;
 				}
 			}
 			
 		}
 		&.light {
-			background: $brandDark2;
+			background: linear-gradient($brandDark2, transparent);
 			color: $lighterGrey;
 			border: none;
 			a.logo {

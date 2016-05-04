@@ -4,11 +4,6 @@ angular.module('app')
 	.controller('AppController', []);
 
 angular.module('app')
-	.controller('SlideController', ['$scope', function($scope){
-		$scope.slides = ['slide 1','slide 2'];
-	}]);
-
-angular.module('app')
 	.controller('NavController', ['$scope', '$location', function($scope, $location){
 		$scope.isActive = function(route) {
 			return route === $location.path();
@@ -50,10 +45,14 @@ angular.module('app')
 	});
 
 
+
+
+
 angular.module('app')
 	.directive('slickSlider',function($timeout){
 		return {
 			restrict: 'A',
+			controller: 'SlideController',
 			link: function(scope,element,attrs) {
 				$timeout(function() {
 					$(element).slick(scope.$eval(attrs.slickSlider));
@@ -61,6 +60,13 @@ angular.module('app')
 			}
 		}
 	});
+
+angular.module('app')
+	.controller('SlideController', ['$scope', '$http', function($scope, $http){
+		$http.get('/api').success(function(response){
+			$scope.slides = response.slides;
+		});
+	}]);
 
 
 angular.module('app')
@@ -80,8 +86,8 @@ angular.module('app')
 		.when('/insights', {
 			templateUrl: 'templates/pages/insights/index.html'
 		})
-		.when('/clients', {
-			templateUrl: 'templates/pages/clients/index.html'
+		.when('/partners', {
+			templateUrl: 'templates/pages/partners/index.html'
 		})
 		.when('/contact', {
 			templateUrl: 'templates/pages/contact/index.html'

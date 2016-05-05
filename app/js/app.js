@@ -45,28 +45,44 @@ angular.module('app')
 	});
 
 
-
+angular.module('app')
+	.directive('testDir',function($timeout){
+		return {
+			restrict: 'A',
+			link: function(scope, element, attrs) {
+				$timeout(function(){
+					console.log(element[0]);
+				});
+			}
+		}
+	});
 
 
 angular.module('app')
 	.directive('slickSlider',function($timeout){
 		return {
 			restrict: 'A',
-			controller: 'SlideController',
+			controller: ['$scope', '$http', function($scope, $http){
+				$http.get('/api').success(function(response){
+					$scope.slides = response.slides;
+				});
+			}],
 			link: function(scope,element,attrs) {
+				console.log(element+' preload')
 				$timeout(function() {
-					$(element).slick(scope.$eval(attrs.slickSlider));
+					$(element).slick();
+					console.info(attrs.class);
 				});
 			}
 		}
 	});
 
-angular.module('app')
-	.controller('SlideController', ['$scope', '$http', function($scope, $http){
-		$http.get('/api').success(function(response){
-			$scope.slides = response.slides;
-		});
-	}]);
+// angular.module('app')
+// 	.controller('SlideController', ['$scope', '$http', function($scope, $http){
+// 		$http.get('/api').success(function(response){
+// 			$scope.slides = response.slides;
+// 		});
+// 	}]);
 
 
 angular.module('app')

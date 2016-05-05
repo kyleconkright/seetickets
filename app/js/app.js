@@ -59,23 +59,24 @@ angular.module('app')
 
 
 angular.module('app')
-	.directive('slickSlider',function($timeout){
+	.directive('slickSlider', ['$timeout',function($timeout){
 		return {
 			restrict: 'A',
+
 			controller: ['$scope', '$http', function($scope, $http){
+				$scope.slides = [];
 				$http.get('/api').success(function(response){
 					$scope.slides = response.slides;
 				});
 			}],
 			link: function(scope,element,attrs) {
-				console.log(element+' preload')
-				$timeout(function() {
-					$(element).slick();
-					console.info(attrs.class);
-				});
+				var loadSlider = function() {
+					$(element).slick({autoplay: true});
+				}
+				$timeout(loadSlider, 100);
 			}
 		}
-	});
+	}]);
 
 // angular.module('app')
 // 	.controller('SlideController', ['$scope', '$http', function($scope, $http){

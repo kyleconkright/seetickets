@@ -61,12 +61,6 @@
 
 
 	angular.module('app')
-		.config(['ngProgressLiteProvider', function (ngProgressLiteProvider) {
-			ngProgressLiteProvider.settings.ease = 'ease-in';
-		}]);
-
-
-	angular.module('app')
 		.directive('slickSlider', ['$timeout',function($timeout){
 			return {
 				restrict: 'A',
@@ -74,11 +68,9 @@
 				controller: ['$scope', '$http', 'ngProgressLite', function($scope, $http, ngProgressLite){
 					$scope.slides = [];
 					ngProgressLite.start();
-					$timeout(function () {
-						ngProgressLite.done();
-					}, 1500);
 					$http.get('/api').success(function(response){
 						$scope.slides = response.slides;
+						ngProgressLite.done();
 					});
 				}],
 				link: function(scope,element,attrs) {

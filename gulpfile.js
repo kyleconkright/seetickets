@@ -1,12 +1,17 @@
-var gulp 	= require('gulp');
-var sass 	= require('gulp-ruby-sass');
-var concat 	= require('gulp-concat');
+var gulp 			= require('gulp');
+var sass 			= require('gulp-ruby-sass');
+var concat 			= require('gulp-concat');
+var autoprefixer 	= require('gulp-autoprefixer');
 
 gulp.task('default', ['scripts','style', 'watch']);
 
 gulp.task('style', function() {
 	return sass('dev/scss/*.scss')
 		.pipe(concat('style.min.css'))
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
 		.pipe(gulp.dest('app/css'));
 });
 

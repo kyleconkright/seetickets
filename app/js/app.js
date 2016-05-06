@@ -73,7 +73,7 @@ angular.module('app')
 				var loadSlider = function() {
 					$(element).slick({autoplay: true});
 				}
-				$timeout(loadSlider, 100);
+				$timeout(loadSlider, 1000);
 			}
 		}
 	}]);

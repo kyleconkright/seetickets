@@ -48,6 +48,8 @@ div.top-nav {
 			background: linear-gradient($brandDark2, transparent);
 			color: $lighterGrey;
 			border: none;
+			position: absolute;
+			width: 100%;
 			a.logo {
 				background: url('../assets/see-logo.png') no-repeat;
 				background-size: contain;

@@ -1,11 +1,33 @@
 ul.slider {
-	position: relative;
-	top: -150px;
+	height: 600px;
+	overflow: hidden;
 	li {
+		display: block;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		height: 600px;
 		img {
 			width: 100%;
 		}
 	}
 	li:nth-of-type(2n) {
+	}
+	button.slick-arrow {
+		z-index: 1;
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 5%;
+		background: none;
+		cursor: pointer;
+		border: none;
+		&.slick-next {
+			right: 0;
+
+		}
+		&.slick-prev {
+			left: 0;
+		}
 	}
 }

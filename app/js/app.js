@@ -1,117 +1,129 @@
-angular.module('app', ['ngRoute']);
-	
-angular.module('app')
-	.controller('AppController', []);
+(function () {
 
-angular.module('app')
-	.controller('NavController', ['$scope', '$location', function($scope, $location){
-		$scope.isActive = function(route) {
-			return route === $location.path();
-		}
-	}])
-	.directive('myActiveLink', function($location) {
-	  return {
-	    restrict: 'A',
-	    scope: {
-	      path: "@myActiveLink"
-	    },
-	    link: function(scope, element, attributes) {
-	      scope.$on('$locationChangeSuccess', function() {
-	        if ($location.path() === scope.path) {
-	          element.addClass('active');
-	        } else {
-	          element.removeClass('active');
-	        }
-	      });
-	    }
-	  };
-	})
-	.directive('homeNav', function($location) {
-	  return {
-	    restrict: 'A',
-	    scope: {
-	      path: "@homeNav"
-	    },
-	    link: function(scope, element, attributes) {
-	      scope.$on('$locationChangeSuccess', function() {
-	        if ($location.path() === scope.path) {
-	          element.addClass('light');
-	        } else {
-	          element.removeClass('light');
-	        }
-	      });
-	    }
-	  };
-	});
+	angular.module('app', ['ngRoute','ngProgressLite']);
+		
+	angular.module('app')
+		.controller('AppController', []);
 
-
-angular.module('app')
-	.directive('testDir',function($timeout){
-		return {
-			restrict: 'A',
-			link: function(scope, element, attrs) {
-				$timeout(function(){
-					console.log(element[0]);
-				});
+	angular.module('app')
+		.controller('NavController', ['$scope', '$location', function($scope, $location){
+			$scope.isActive = function(route) {
+				return route === $location.path();
 			}
-		}
-	});
+		}])
+		.directive('myActiveLink', function($location) {
+		  return {
+		    restrict: 'A',
+		    scope: {
+		      path: "@myActiveLink"
+		    },
+		    link: function(scope, element, attributes) {
+		      scope.$on('$locationChangeSuccess', function() {
+		        if ($location.path() === scope.path) {
+		          element.addClass('active');
+		        } else {
+		          element.removeClass('active');
+		        }
+		      });
+		    }
+		  };
+		})
+		.directive('homeNav', function($location) {
+		  return {
+		    restrict: 'A',
+		    scope: {
+		      path: "@homeNav"
+		    },
+		    link: function(scope, element, attributes) {
+		      scope.$on('$locationChangeSuccess', function() {
+		        if ($location.path() === scope.path) {
+		          element.addClass('light');
+		        } else {
+		          element.removeClass('light');
+		        }
+		      });
+		    }
+		  };
+		});
 
 
-angular.module('app')
-	.directive('slickSlider', ['$timeout',function($timeout){
-		return {
-			restrict: 'A',
-
-			controller: ['$scope', '$http', function($scope, $http){
-				$scope.slides = [];
-				$http.get('/api').success(function(response){
-					$scope.slides = response.slides;
-				});
-			}],
-			link: function(scope,element,attrs) {
-				var loadSlider = function() {
-					$(element).slick({autoplay: true});
+	angular.module('app')
+		.directive('testDir',function($timeout){
+			return {
+				restrict: 'A',
+				link: function(scope, element, attrs) {
+					$timeout(function(){
+						console.log(element[0]);
+					});
 				}
-				$timeout(loadSlider, 1000);
 			}
-		}
+		});
+
+
+	angular.module('app')
+		.config(['ngProgressLiteProvider', function (ngProgressLiteProvider) {
+			ngProgressLiteProvider.settings.ease = 'ease-in';
+		}]);
+
+
+	angular.module('app')
+		.directive('slickSlider', ['$timeout',function($timeout){
+			return {
+				restrict: 'A',
+
+				controller: ['$scope', '$http', 'ngProgressLite', function($scope, $http, ngProgressLite){
+					$scope.slides = [];
+					ngProgressLite.start();
+					$timeout(function () {
+						ngProgressLite.done();
+					}, 1500);
+					$http.get('/api').success(function(response){
+						$scope.slides = response.slides;
+					});
+				}],
+				link: function(scope,element,attrs) {
+					var loadSlider = function() {
+						$(element).slick({autoplay: true});
+					}
+					$timeout(loadSlider, 1000);
+				}
+			}
+		}]);
+
+	// angular.module('app')
+	// 	.controller('SlideController', ['$scope', '$http', function($scope, $http){
+	// 		$http.get('/api').success(function(response){
+	// 			$scope.slides = response.slides;
+	// 		});
+	// 	}]);
+
+
+	angular.module('app')
+		.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
+
+			$locationProvider.html5Mode(true);
+
+			$routeProvider.when('/', {
+				templateUrl: 'templates/pages/home/index.html'
+			})
+			.when('/about', {
+				templateUrl: 'templates/pages/about/index.html'
+			})
+			.when('/solutions', {
+				templateUrl: 'templates/pages/solutions/index.html'
+			})
+			.when('/insights', {
+				templateUrl: 'templates/pages/insights/index.html'
+			})
+			.when('/partners', {
+				templateUrl: 'templates/pages/partners/index.html'
+			})
+			.when('/contact', {
+				templateUrl: 'templates/pages/contact/index.html'
+			})
+			.otherwise({redirectTo: '/'});
+
 	}]);
 
-// angular.module('app')
-// 	.controller('SlideController', ['$scope', '$http', function($scope, $http){
-// 		$http.get('/api').success(function(response){
-// 			$scope.slides = response.slides;
-// 		});
-// 	}]);
-
-
-angular.module('app')
-	.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
-
-		$locationProvider.html5Mode(true);
-
-		$routeProvider.when('/', {
-			templateUrl: 'templates/pages/home/index.html'
-		})
-		.when('/about', {
-			templateUrl: 'templates/pages/about/index.html'
-		})
-		.when('/solutions', {
-			templateUrl: 'templates/pages/solutions/index.html'
-		})
-		.when('/insights', {
-			templateUrl: 'templates/pages/insights/index.html'
-		})
-		.when('/partners', {
-			templateUrl: 'templates/pages/partners/index.html'
-		})
-		.when('/contact', {
-			templateUrl: 'templates/pages/contact/index.html'
-		})
-		.otherwise({redirectTo: '/'});
-
-}]);
-
-
+}());
 

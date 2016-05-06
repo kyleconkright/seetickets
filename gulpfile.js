@@ -2,6 +2,7 @@ var gulp 			= require('gulp');
 var sass 			= require('gulp-ruby-sass');
 var concat 			= require('gulp-concat');
 var autoprefixer 	= require('gulp-autoprefixer');
+var uglify			= require('gulp-uglify');
 
 gulp.task('default', ['scripts','style', 'watch']);
 
@@ -18,6 +19,7 @@ gulp.task('style', function() {
 gulp.task('scripts', function() {
 	return gulp.src('dev/js/*.js')
 		.pipe(concat('vendor.js'))
+		.pipe(uglify())
 		.pipe(gulp.dest('app/js'));
 });
 

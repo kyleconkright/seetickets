@@ -69,25 +69,24 @@
 					$scope.slides = [];
 					ngProgressLite.start();
 					$http.get('/api').success(function(response){
-						$scope.slides = response.slides;
+						$scope.titles = [];
+						for(let slide in response.slides) {
+							let title = response.slides[slide].slice(18, -4);
+							$scope.slides.push({'image': response.slides[slide], 'title': title + '.'});
+						}
+						console.log($scope.slides);
 						ngProgressLite.done();
 					});
+					
 				}],
 				link: function(scope,element,attrs) {
 					var loadSlider = function() {
-						$(element).slick({autoplay: true});
+						$(element).slick(scope.$eval(attrs.slickSlider));
 					}
-					$timeout(loadSlider, 1000);
+					$timeout(loadSlider, 50);
 				}
 			}
 		}]);
-
-	// angular.module('app')
-	// 	.controller('SlideController', ['$scope', '$http', function($scope, $http){
-	// 		$http.get('/api').success(function(response){
-	// 			$scope.slides = response.slides;
-	// 		});
-	// 	}]);
 
 
 	angular.module('app')

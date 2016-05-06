@@ -1,3 +1,5 @@
+@import 'variables';
+
 ul.slider {
 	height: 600px;
 	overflow: hidden;
@@ -31,3 +33,29 @@ ul.slider {
 		}
 	}
 }
+
+.nav-holder {
+	background: #4993f4;
+	color: white;
+	text-transform: uppercase;
+	font-weight: 200;
+	font-size: 3em;
+	width: 40%;
+	float: right;
+	margin: (-$space*12) 0 0 0;
+	position: absolute;
+	right: 0;
+	padding: $space*2 $space*2 $space*1.5;
+	img {
+		height: 48px;
+		float: left;
+		margin: 0 10px 0 0;
+	}
+	ul.slider-nav {
+		li {
+				
+		}
+		
+	}	
+}
+

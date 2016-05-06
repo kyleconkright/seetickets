@@ -1,10 +1,10 @@
-<ul slick-slider="{autoplay: true, asNavFor: '.slider-nav', focusOnSelect: true}" class="slider">
+<ul slick-slider="{autoplay: true, asNavFor: '.slider-nav', focusOnSelect: true, pauseOnHover: false}" class="slider">
 	<li ng-repeat="slide in slides" style="background-image: url({{slide.image}}"></li>
 </ul>
 
 <div class="nav-holder">
 	<img src="assets/see-logo.png">
-	<ul slick-slider="{asNavFor: '.slider', arrows: false, vertical: true, focusOnSelect: true, swipe: false}" class="slider-nav">
+	<ul slick-slider="{asNavFor: '.slider', arrows: false, vertical: true, focusOnSelect: true, swipe: false, pauseOnHover: false}" class="slider-nav">
 		<li ng-repeat="slide in slides">{{slide.title}}</li>
 	</ul>
 </div>

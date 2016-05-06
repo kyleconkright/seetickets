@@ -259,4 +259,15 @@ ul.slider {
   .nav-holder img {
     height: 48px;
     float: left;
-    margin: 0 10px 0 0; }
+    margin: 0 15px 0 0; }
+  .nav-holder:before {
+    content: ' ';
+    display: block;
+    background: #4993f4;
+    width: 19px;
+    height: 100%;
+    position: absolute;
+    left: -7px;
+    top: 0;
+    -webkit-transform: skew(-7deg);
+    transform: skew(-7deg); }

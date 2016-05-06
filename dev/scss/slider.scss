@@ -49,13 +49,24 @@ ul.slider {
 	img {
 		height: 48px;
 		float: left;
-		margin: 0 10px 0 0;
+		margin: 0 15px 0 0;
 	}
 	ul.slider-nav {
 		li {
 				
 		}
 		
+	}
+	&:before {
+		content: ' ';
+	    display: block;
+	    background: #4993f4;
+	    width: 19px;
+	    height: 100%;
+	    position: absolute;
+	    left: -7px;
+	    top: 0;
+	    transform: skew(-7deg);
 	}	
 }
 

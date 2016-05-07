@@ -271,3 +271,13 @@ ul.slider {
     top: 0;
     -webkit-transform: skew(-7deg);
     transform: skew(-7deg); }
+  .nav-holder:after {
+    content: '';
+    display: block;
+    background: linear-gradient(#4993f4 33%, transparent 37%, transparent 69%, #4993f4 73%);
+    height: 100%;
+    width: 69%;
+    overflow: hidden;
+    position: absolute;
+    left: 140px;
+    top: 0; }

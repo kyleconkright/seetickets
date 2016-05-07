@@ -68,5 +68,16 @@ ul.slider {
 	    top: 0;
 	    transform: skew(-7deg);
 	}	
+	&:after {
+		content: '';
+		display: block;
+	    background: linear-gradient(#4993f4 33%, transparent 37%, transparent 69%, #4993f4 73%);
+	    height: 100%;
+	    width: 69%;
+	    overflow: hidden;
+	    position: absolute;
+	    left: 140px;
+	    top: 0;
+	}
 }
 

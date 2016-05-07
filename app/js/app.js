@@ -64,20 +64,13 @@
 		.directive('slickSlider', ['$timeout',function($timeout){
 			return {
 				restrict: 'A',
-
 				controller: ['$scope', '$http', 'ngProgressLite', function($scope, $http, ngProgressLite){
-					$scope.slides = [];
 					ngProgressLite.start();
 					$http.get('/api').success(function(response){
-						$scope.titles = [];
-						for(let slide in response.slides) {
-							let title = response.slides[slide].slice(18, -4);
-							$scope.slides.push({'image': response.slides[slide], 'title': title + '.'});
-						}
-						console.log($scope.slides);
+						$scope.slides = response;
 						ngProgressLite.done();
+						console.log($scope.slides);
 					});
-					
 				}],
 				link: function(scope,element,attrs) {
 					var loadSlider = function() {

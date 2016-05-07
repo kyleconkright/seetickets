@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 var fs = require('fs');
 var http = require('http');
-// var request = require('request');
+var request = require('request');
 
 var app = express();
 
@@ -10,30 +10,30 @@ app.use(express.static(path.join(__dirname, 'app')));
 
 
 
-// app.get('/api', function(req, res) {
-// 	var url = 'http://www.kyleconkright.com/seetickets/';
-// 	request.get(url+'slides.json', function (error, response, body) {
-// 	    if (!error && response.statusCode == 200) {
-// 	        var slides = JSON.parse(body);
-// 	        for(var i in slides) {
-// 				slides[i].image = url+slides[i].image;
-// 			}
-// 	        res.json(slides);
-// 	    }
-// 	});
+app.get('/api', function(req, res) {
+	var url = 'http://www.kyleconkright.com/seetickets/';
+	request.get(url+'slides.json', function (error, response, body) {
+	    if (!error && response.statusCode == 200) {
+	        var slides = JSON.parse(body);
+	        for(var i in slides) {
+				slides[i].image = url+slides[i].image;
+			}
+	        res.json(slides);
+	    }
+	});
 	
-// });
+});
 
 //SLIDES API
-app.get('/api', function(req, res) {
-	var files = fs.readdirSync(__dirname+'/app/assets/slides/');
-	var slides = {slides: []};
-	for(var i in files) {
-	  slides.slides.push('assets/slides/'+files[i]);
+// app.get('/api', function(req, res) {
+// 	var files = fs.readdirSync(__dirname+'/app/assets/slides/');
+// 	var slides = {slides: []};
+// 	for(var i in files) {
+// 	  slides.slides.push('assets/slides/'+files[i]);
 	  
-	}
-	res.json(slides);
-});
+// 	}
+// 	res.json(slides);
+// });
 
 
 //DEFAULT TO ANGULAR IF NO SERVER ROUTES DEFINED

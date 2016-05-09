@@ -25,9 +25,9 @@ div.top-nav {
 				padding: $space/4 0;
 			}
 			a.logo {
-				background: url('../assets/see-logo-dark.png') no-repeat;
+				background: url('../assets/st-logo-dark.png') no-repeat;
 				background-size: contain;
-				width: 70px;
+				width: 150px;
 				height: 32px;
 				display: inline-block;
 			}
@@ -51,7 +51,7 @@ div.top-nav {
 			position: absolute;
 			width: 100%;
 			a.logo {
-				background: url('../assets/see-logo.png') no-repeat;
+				background: url('../assets/st-logo.png') no-repeat;
 				background-size: contain;
 			}
 		}

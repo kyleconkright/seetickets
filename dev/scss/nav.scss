@@ -1,5 +1,5 @@
-@import 'mixins.scss';
-@import 'variables.scss';
+@import 'mixins';
+@import 'variables';
 
 div.top-nav {
 	position: relative;
@@ -19,7 +19,7 @@ div.top-nav {
 				font-size: .95em;
 				font-weight: 300;
 				letter-spacing: .045em;
-				transition: .2s all;
+				transition: .2s color, .2s border, .2s font-weight;
 				border: 1px solid transparent;
 				border-width: 0 0 1px 0;
 				padding: $space/4 0;
@@ -30,16 +30,40 @@ div.top-nav {
 				width: 150px;
 				height: 32px;
 				display: inline-block;
+				flex: 1;
 			}
 			.menu {
+				flex: 2;
 				text-align: right;
+				@include tablet {
+					position: fixed;
+					padding: $space;
+					width: 300px;
+					height: 100vh;
+					background: rgba(0,0,20,.9);
+					color: $lighterGrey;
+					right: 0;
+					top: 0;
+					a {
+						display: block;
+						text-align: left;
+						padding: $space;
+					}
+				}
 				a {
 					margin: 0 0 0 5px;
+					@include tablet {
+						border: none;
+					}
 				}
 				a.active {
 					color: #0c9a9a;
 					border: 1px solid;
 					border-width: 0 0 1px 0;
+					@include tablet {
+						border: none;
+						font-weight: 400;
+					}
 				}
 			}
 			

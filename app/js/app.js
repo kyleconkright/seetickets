@@ -76,7 +76,7 @@
 					var loadSlider = function() {
 						$(element).slick(scope.$eval(attrs.slickSlider));
 					}
-					$timeout(loadSlider, 500);
+					$timeout(loadSlider, 1000);
 				}
 			}
 		}]);

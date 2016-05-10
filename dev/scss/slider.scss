@@ -1,6 +1,8 @@
 @import 'mixins';
 @import 'variables';
 
+
+
 ul.slider {
 	height: 600px;
 	overflow: hidden;
@@ -72,4 +74,6 @@ ul.slider {
 	    transform: skew(-7deg);
 	}	
 }
+
+.slick-slider { display: table; table-layout: fixed; width: 100%; }
 

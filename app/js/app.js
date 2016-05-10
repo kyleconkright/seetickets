@@ -10,6 +10,17 @@
 			$scope.isActive = function(route) {
 				return route === $location.path();
 			}
+			$scope.mobileMenu = function() {
+				var menu = '.top-nav .menu';
+				var menuTrigger = '.mobile-menu-trigger';
+				if($(menu).hasClass('open')) {
+					$(menu).removeClass('open');
+					$(menuTrigger).html('&#9776;');
+				} else {
+					$(menu).addClass('open');
+					$(menuTrigger).html('&#10142;');
+				}
+			}
 		}])
 		.directive('myActiveLink', function($location) {
 		  return {

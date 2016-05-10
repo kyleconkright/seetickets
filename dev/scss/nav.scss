@@ -28,27 +28,33 @@ div.top-nav {
 				background: url('../assets/st-logo-dark.png') no-repeat;
 				background-size: contain;
 				width: 150px;
-				height: 32px;
+				height: 25px;
 				display: inline-block;
 				flex: 1;
 			}
 			.menu {
 				flex: 2;
 				text-align: right;
+				transition: right .4s;
 				@include tablet {
 					position: fixed;
 					padding: $space;
 					width: 300px;
-					height: 100vh;
+					height: 120vh;
+					overflow: hidden;
 					background: rgba(0,0,20,.9);
 					color: $lighterGrey;
-					right: 0;
+					right: -300px;
 					top: 0;
 					a {
 						display: block;
 						text-align: left;
 						padding: $space;
 					}
+					&.open {
+						right: 0;
+					}
+					
 				}
 				a {
 					margin: 0 0 0 5px;
@@ -77,6 +83,16 @@ div.top-nav {
 			a.logo {
 				background: url('../assets/st-logo.png') no-repeat;
 				background-size: contain;
+			}
+		}
+		.mobile-menu-trigger {display: none;}
+		@include tablet {
+			a.mobile-menu-trigger {
+				position: absolute;
+				display: block;
+				padding: 0;
+				font-size: 1.2em;
+				margin: -2px 0 0;
 			}
 		}
 	}	

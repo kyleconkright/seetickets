@@ -23,9 +23,6 @@ body {
 	margin: 0 auto;
 	padding: $space 0;
 	@include tablet {
-		width: 90%;
-	}
-	@include mobile {
-		width: 95%;
+		width: 85%;
 	}
 }

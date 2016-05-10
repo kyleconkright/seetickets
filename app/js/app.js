@@ -15,10 +15,10 @@
 				var menuTrigger = '.mobile-menu-trigger';
 				if($(menu).hasClass('open')) {
 					$(menu).removeClass('open');
-					$(menuTrigger).html('&#9776;');
+					$(menuTrigger).html('<i class="material-icons">menu</i>');
 				} else {
 					$(menu).addClass('open');
-					$(menuTrigger).html('&#10141;');
+					$(menuTrigger).html('<i class="material-icons">chevron_right</i>');
 				}
 			}
 		}])

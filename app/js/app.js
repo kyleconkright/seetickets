@@ -18,7 +18,7 @@
 					$(menuTrigger).html('&#9776;');
 				} else {
 					$(menu).addClass('open');
-					$(menuTrigger).html('&#10142;');
+					$(menuTrigger).html('&#10141;');
 				}
 			}
 		}])

@@ -55,7 +55,7 @@ div.top-nav {
 						right: 0;
 					}
 					&.open ~ .mobile-menu-trigger {
-						color: white;
+						color: $lighterGrey;
 					}
 				}
 				a {
@@ -93,6 +93,7 @@ div.top-nav {
 				position: absolute;
 				display: block;
 				padding: 0;
+				right: 0;
 				font-size: 1.5em;
 				margin: -2px 0 0;
 			}

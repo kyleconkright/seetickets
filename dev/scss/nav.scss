@@ -54,7 +54,9 @@ div.top-nav {
 					&.open {
 						right: 0;
 					}
-					
+					&.open ~ .mobile-menu-trigger {
+						color: white;
+					}
 				}
 				a {
 					margin: 0 0 0 5px;

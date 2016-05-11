@@ -58,21 +58,11 @@
 		});
 
 
-	angular.module('app')
-		.directive('testDir',function($timeout){
-			return {
-				restrict: 'A',
-				link: function(scope, element, attrs) {
-					$timeout(function(){
-						console.log(element[0]);
-					});
-				}
-			}
-		});
+
 
 
 	angular.module('app')
-		.directive('slickSlider', ['$timeout',function($timeout){
+		.directive('slickSlider', function($timeout){
 			return {
 				restrict: 'A',
 				controller: ['$scope', '$http', 'ngProgressLite', function($scope, $http, ngProgressLite){
@@ -80,17 +70,20 @@
 					$http.get('/api').success(function(response){
 						$scope.slides = response;
 						ngProgressLite.done();
-						console.log($scope.slides);
 					});
 				}],
-				link: function(scope,element,attrs) {
+				link: function(scope, element, attrs) {
+					console.log(element);
+					// $(window).load(function(){
+					// 	$(element).slick(scope.$eval(attrs.slickSlider));
+					// })
 					var loadSlider = function() {
 						$(element).slick(scope.$eval(attrs.slickSlider));
 					}
 					$timeout(loadSlider, 1000);
 				}
 			}
-		}]);
+		});
 
 
 	angular.module('app')

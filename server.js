@@ -26,13 +26,23 @@ app.get('/api/slides', function(req, res) {
 });
 
 app.get('/api/about', function(req, res) {
-	request.get(url+'about.json', function (error, response, body) {
-	    if (!error && response.statusCode == 200) {
-	        var data = JSON.parse(body);
-	        res.json(data);
-	    }
-	});
+	request(url+'about.html').pipe(res);
+	// request.get(url+'about.json', function (error, response, body) {
+	//     if (!error && response.statusCode == 200) {
+	//         var data = JSON.parse(body);
+	//         res.json(data);
+	//     }
+	// });
 });
+
+// app.get('/api/about', function(req, res) {
+// 	request.get(url+'about.json', function (error, response, body) {
+// 	    if (!error && response.statusCode == 200) {
+// 	        var data = JSON.parse(body);
+// 	        res.json(data);
+// 	    }
+// 	});
+// });
 
 app.get('/api/partners', function(req, res) {
 	request.get(url+'partners.json', function (error, response, body) {

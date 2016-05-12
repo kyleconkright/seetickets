@@ -6,7 +6,8 @@
 				restrict: "A",
 				controller: ['$scope', '$http', 'ngProgressLite', function($scope, $http, ngProgressLite){
 					ngProgressLite.start();
-					$http.get('/api/parters').success(function(response){
+					// $scope.partners = 'partners content';
+					$http.get('/api/partners').success(function(response){
 						$scope.partners = response.partners;
 						ngProgressLite.done();
 					});

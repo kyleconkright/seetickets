@@ -4,10 +4,11 @@
 		.directive('about', function(){
 			return {
 				restrict: "A",
-				controller: ['$scope', '$http', 'ngProgressLite', function($scope, $http, ngProgressLite){
+				controller: ['$scope', '$http', '$sce', 'ngProgressLite', function($scope, $http, $sce, ngProgressLite){
 					ngProgressLite.start();
 					$http.get('/api/about').success(function(response){
-						$scope.about = response.about;
+						// $scope.about = response;
+						$scope.about = $sce.trustAsHtml(response);
 						ngProgressLite.done();
 					});
 				}]

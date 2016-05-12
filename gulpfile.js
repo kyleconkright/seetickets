@@ -5,7 +5,7 @@ var autoprefixer 	= require('gulp-autoprefixer');
 var uglify			= require('gulp-uglify');
 
 var paths = {
-	app: ['app/module.js','app/routes.js','app/shared/nav/*.js']
+	app: ['app/module.js','app/routes.js','app/shared/**/*.js','app/components/**/*.js']
 }
 
 var bases = {

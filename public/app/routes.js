@@ -6,22 +6,22 @@
 			$locationProvider.html5Mode(true);
 
 			$routeProvider.when('/', {
-				templateUrl: 'components/home/index.html'
+				templateUrl: 'app/components/home/index.html'
 			})
 			.when('/about', {
-				templateUrl: 'components/about/index.html'
+				templateUrl: 'app/components/about/index.html'
 			})
 			.when('/solutions', {
-				templateUrl: 'components/solutions/index.html'
+				templateUrl: 'app/components/solutions/index.html'
 			})
 			.when('/insights', {
-				templateUrl: 'components/insights/index.html'
+				templateUrl: 'app/components/insights/index.html'
 			})
 			.when('/partners', {
-				templateUrl: 'components/partners/index.html'
+				templateUrl: 'app/components/partners/index.html'
 			})
 			.when('/contact', {
-				templateUrl: 'components/contact/index.html'
+				templateUrl: 'app/components/contact/index.html'
 			})
 			.otherwise({redirectTo: '/'});
 

@@ -6,7 +6,7 @@ var request = require('request');
 
 var app = express();
 
-app.use(express.static(path.join(__dirname, 'app')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 
@@ -38,7 +38,7 @@ app.get('/api', function(req, res) {
 
 //DEFAULT TO ANGULAR IF NO SERVER ROUTES DEFINED
 app.all('*', function(req, res) {
-  res.sendFile('/app/index.html', { root: __dirname });
+  res.sendFile('/public/index.html', { root: __dirname });
 });
 
 var port = process.env.PORT || 3000;

@@ -97,18 +97,52 @@
 (function(){
 
 	angular.module('app')
+		.directive('about', function(){
+			return {
+				restrict: "A",
+				controller: ['$scope', '$http', 'ngProgressLite', function($scope, $http, ngProgressLite){
+					ngProgressLite.start();
+					$http.get('/api/about').success(function(response){
+						$scope.about = response.about;
+						ngProgressLite.done();
+					});
+				}]
+			}
+		})
+
+})();
+(function(){
+
+	angular.module('app')
+		.directive('contact', function(){
+			return {
+				restrict: "A",
+				controller: ['$scope', '$http', 'ngProgressLite', function($scope, $http, ngProgressLite){
+					ngProgressLite.start();
+					$http.get('/api/contact').success(function(response){
+						$scope.about = response.about;
+						ngProgressLite.done();
+					});
+				}]
+			}
+		})
+
+})();
+(function(){
+
+	angular.module('app')
 		.directive('slickSlider', function($timeout){
 			return {
 				restrict: 'A',
 				controller: ['$scope', '$http', 'ngProgressLite', function($scope, $http, ngProgressLite){
 					ngProgressLite.start();
-					$http.get('/api').success(function(response){
+					$http.get('/api/slides').success(function(response){
 						$scope.slides = response;
 						ngProgressLite.done();
 					});
 				}],
 				link: function(scope, element, attrs) {
-					console.log(element);
+
 					// $(window).load(function(){
 					// 	$(element).slick(scope.$eval(attrs.slickSlider));
 					// })
@@ -120,4 +154,38 @@
 			}
 		});
 		
+})();
+(function(){
+
+	angular.module('app')
+		.directive('insights', function(){
+			return {
+				restrict: "A",
+				controller: ['$scope', '$http', 'ngProgressLite', function($scope, $http, ngProgressLite){
+					ngProgressLite.start();
+					$http.get('/api/insights').success(function(response){
+						$scope.about = response.about;
+						ngProgressLite.done();
+					});
+				}]
+			}
+		})
+
+})();
+(function(){
+
+	angular.module('app')
+		.directive('partners', function(){
+			return {
+				restrict: "A",
+				controller: ['$scope', '$http', 'ngProgressLite', function($scope, $http, ngProgressLite){
+					ngProgressLite.start();
+					$http.get('/api/parters').success(function(response){
+						$scope.partners = response.partners;
+						ngProgressLite.done();
+					});
+				}]
+			}
+		})
+
 })();

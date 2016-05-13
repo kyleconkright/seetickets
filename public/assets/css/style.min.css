@@ -237,8 +237,9 @@ div.top-nav {
       div.top-nav nav a.mobile-menu-trigger {
         position: absolute;
         display: block;
-        padding: 0;
-        right: 0; }
+        padding: 2rem 1rem 1rem;
+        right: -1rem;
+        top: -1rem; }
         div.top-nav nav a.mobile-menu-trigger i {
           font-size: 28px; } }
 
@@ -263,6 +264,64 @@ div.top-nav {
   opacity: 1;
   -webkit-transform: rotate(3deg) translate(0px, -4px);
   transform: rotate(3deg) translate(0px, -4px); }
+
+.partners.container {
+  min-height: 60vh;
+  padding: 2rem 0; }
+  .partners.container p {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.5em;
+    line-height: 1.75em;
+    color: #072a43; }
+  .partners.container ul.categories {
+    text-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 2rem; }
+    .partners.container ul.categories li {
+      display: inline-block;
+      font-weight: 300;
+      text-transform: capitalize;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1; }
+      .partners.container ul.categories li a {
+        padding: 1rem 1.25rem;
+        border-radius: 2px; }
+      .partners.container ul.categories li:first-of-type a {
+        background: #4993f4;
+        color: white; }
+  .partners.container ul.logos {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .partners.container ul.logos li {
+      -webkit-flex-basis: 20%;
+      -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+      padding: 3%; }
+      .partners.container ul.logos li img {
+        width: 100%; }
 
 /* Slider */
 .slick-slider {

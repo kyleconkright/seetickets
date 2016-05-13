@@ -1,4 +1,13 @@
-<div class="container" partners>
-	<h1>Partners</h1>	
-	<p>{{partners}}</p>
+<div class="container partners" partners>
+	<p>{{partners.subheader}}</p>
+	<ul class="categories">
+		<li ng-repeat="partner in partners.partners">
+			<h3><a href>{{partner.category}}</a></h3>
+		</li>
+	</ul>
+
+	<ul class="logos">
+		<li ng-repeat="brand in brands"><img ng-src="{{brand.logo}}"></li>
+	</ul>
+
 </div>

@@ -74,18 +74,17 @@
 		    link: function(scope, element, attributes) {
 		      scope.$on('$locationChangeSuccess', function() {
 		      	
-		      	// console.log('location path = '+$location.path()+ '   scope.path = '+scope.path)
+					if($location.path() === scope.path) {
+						element.addClass("light");	
+						checkScroll(element);						
+					} else {
+						element.removeClass("light");
+					}
+					$(window).scroll(function() {
 						if($location.path() === scope.path) {
-							element.addClass("light");	
-							checkScroll(element);						
-						} else {
-							element.removeClass("light");
+							checkScroll(element);
 						}
-						$(window).scroll(function() {
-							if($location.path() === scope.path) {
-								checkScroll(element);
-							}
-						});
+					});
 		      });
 		    }
 		  };
@@ -201,9 +200,22 @@
 				restrict: "A",
 				controller: ['$scope', '$http', 'ngProgressLite', function($scope, $http, ngProgressLite){
 					ngProgressLite.start();
-					// $scope.partners = 'partners content';
 					$http.get('/api/partners').success(function(response){
-						$scope.partners = response.partners;
+						$scope.partners = response;
+						$scope.brands = [];
+						brnds = [];
+						for(i in response.partners) {
+							for(j in response.partners[i].brands) {
+								$scope.brands.push(
+									{
+										"name":response.partners[i].brands[j].name,
+										"logo":response.partners[i].brands[j].logo,
+										"category":response.partners[i].category}
+								);
+							}
+						}
+						console.log('brnds: '+brnds);
+
 						ngProgressLite.done();
 					});
 				}]

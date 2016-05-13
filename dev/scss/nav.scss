@@ -97,8 +97,10 @@ div.top-nav {
 			a.mobile-menu-trigger {
 				position: absolute;
 				display: block;
-				padding: 0;
-				right: 0;
+				padding: $space*2 $space $space;
+				right: -$space;
+				top: -$space;
+				
 				i {
 					font-size: 28px;
 				}

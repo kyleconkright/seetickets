@@ -10,6 +10,9 @@
 		font-size: 1.5em;
 		line-height: 1.75em;
 		color: $brandDark2/.6;
+		@include mobile {
+			padding: 0;
+		}
 	}
 	ul.categories {
 		text-align: center;
@@ -17,20 +20,32 @@
 		justify-content: center;
 		align-items: center;
 		justify-content: space-around; 
+		flex-wrap: wrap;
 		padding: $space*2;
 		li {
 			display: inline-block;
 			font-weight: 300;
 			text-transform: capitalize;
 			flex: 1;
+			@include mobile {
+				line-height: 2.5em;
+				display: inline-block;
+			}
 			a {
 				padding: $space $space*1.25;
 				border-radius: 2px;
+				@include mobile {
+					padding: $space/3 $space/2;
+				}
 			}
 			&:first-of-type a {
 				background: $seeblue;
 				color: white;
 			}
+		}
+		@include mobile {
+			display: block;
+			padding: $space 0;
 		}
 	}
 
@@ -42,6 +57,9 @@
 		li {
 			flex-basis: 20%;
 			padding: 3%;
+			@include mobile {
+				flex-basis: 33.3333%;
+			}
 			img {
 				width: 100%;
 			}

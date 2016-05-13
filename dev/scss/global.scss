@@ -20,7 +20,7 @@ body {
 
 .container {
 	width: 80%;
-	margin: 0 auto;
+	margin: $space*6 auto;
 	padding: $space 0;
 	position: relative;
 	@include tablet {
@@ -30,17 +30,43 @@ body {
 
 //TEXT
 .see-logo {
-	color: $seeblue;
+	color: $link;
 	b {
 		font-weight: 700;
 		font-style: italic;
 	}
 }
 
-h1 {
+h1, h4 {
 	margin: 0 0 $space;
+}
+h4 {
+	font-weight: 700;
+	text-transform: uppercase;
 }
 
 p {
 	margin: 0 0 $space;
+	a {
+		text-decoration: underline;
+	}
 }
+
+.btn {
+	background: $blue;
+	color: white;
+	display: flex;
+	align-items: center;
+	align-self: center;
+	justify-content: center;
+	width: 150px;
+	font-size: 1em;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: $space;
+	i {
+		font-size: 20px;
+		margin: 0 5px 0 0;
+	}
+}
+

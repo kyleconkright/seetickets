@@ -2,7 +2,6 @@
 @import 'variables';
 
 
-
 ul.slider {
 	height: 600px;
 	overflow: hidden;
@@ -35,6 +34,18 @@ ul.slider {
 			left: 0;
 		}
 	}
+	@include tablet {
+		height: 500px;
+		li {
+			height: 500px;
+		}
+	}
+	@include mobile {
+		height: 400px;
+		li {
+			height: 400px;
+		}
+	}
 }
 
 .nav-holder {
@@ -48,9 +59,6 @@ ul.slider {
 	position: absolute;
 	right: 0;
 	padding: $space*2 $space*2 $space*1.5;
-	@include tablet {
-		
-	}
 	img {
 		height: 48px;
 		float: left;
@@ -73,5 +81,19 @@ ul.slider {
 	    top: 0;
 	    transform: skew(-7deg);
 	}	
+	@include tablet {
+		margin: (-$space*4) 0 0 0;
+		width: 60%;
+		padding: $space*1 $space*1 $space*.5;
+		font-size: 2em;
+		img {
+			height: 32px;
+		}
+	}
+	@include mobile {
+		width: 100%;
+		position: relative;
+		margin: 0;
+	}
 }
 

@@ -38,10 +38,12 @@
 					padding: $space/3 $space/2;
 				}
 			}
-			&:first-of-type a {
+			a.active {
 				background: $seeblue;
 				color: white;
 			}
+			
+			
 		}
 		@include mobile {
 			display: block;

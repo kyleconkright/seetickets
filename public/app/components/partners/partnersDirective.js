@@ -20,10 +20,18 @@
 								);
 							}
 						}
-						console.log('brnds: '+brnds);
-
 						ngProgressLite.done();
 					});
+					$scope.category = 'music';
+
+					$scope.showLogos = function(setCategory) {
+						$scope.category = setCategory;
+					}
+
+					$scope.isSelected = function(checkCategory) {
+						return $scope.category === checkCategory;
+
+					}
 				}]
 			}
 		})

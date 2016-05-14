@@ -23,22 +23,25 @@
 		flex-wrap: wrap;
 		padding: $space*2;
 		li {
-			display: inline-block;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			font-weight: 300;
+			font-size: 1.15em;
 			text-transform: capitalize;
 			flex: 1;
+			min-height: 4rem;
+			padding: 0 $space/2;
 			@include mobile {
-				line-height: 2.5em;
-				display: inline-block;
 			}
 			a {
-				padding: $space $space*1.25;
+			
 				border-radius: 2px;
 				@include mobile {
 					padding: $space/3 $space/2;
 				}
 			}
-			a.active {
+			&.active {
 				background: $seeblue;
 				color: white;
 			}

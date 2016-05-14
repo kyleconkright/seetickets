@@ -1,8 +1,8 @@
 <div class="container partners" partners>
 	<p>{{partners.subheader}}</p>
 	<ul class="categories">
-		<li ng-repeat="partner in partners.partners" ng-click="showLogos(partner.category)">
-			<h3><a ng-class="{active:isSelected(partner.category)}" href>{{partner.category}}</a></h3>
+		<li ng-class="{active:isSelected(partner.category)}" ng-repeat="partner in partners.partners" ng-click="showLogos(partner.category)">
+			<h3><a href>{{partner.category}}</a></h3>
 		</li>
 	</ul>
 

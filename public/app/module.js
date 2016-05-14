@@ -1,5 +1,5 @@
 (function () {
 
-	angular.module('app', ['ngRoute','ngProgressLite', 'ngAnimate']);
+	angular.module('app', ['ngRoute','ngProgressLite']);
 
 })();

@@ -6,11 +6,17 @@
 .dyk {
 	background: #f3f3f3;
 	color: #666;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 	font-size: .85em;
+	padding: 0 $space;
+	@include tablet {
+		flex-direction: column;
+		padding: $space;
+	}
 	span {
 		display: inline-block;
 		margin: 0 $space 0 0;
@@ -20,6 +26,12 @@
 		background: $seeblue;
 		color: white;
 		padding: $space $space;
+		@include tablet {
+			margin: 0;
+			padding: 0 0 $space/2;
+			background: transparent;
+			color: inherit;
+		}
 	}
 	i {
 		font-size: 1.25em;

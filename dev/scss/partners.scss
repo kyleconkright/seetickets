@@ -62,6 +62,21 @@
 		li {
 			flex-basis: 20%;
 			padding: 3%;
+			&.ng-hide {
+				opacity: 0;
+				position: relative;
+				top: -5px;
+			}
+			&.ng-hide-add-active {
+				transition: none;	
+				opacity: 0;
+			}
+			&.ng-hide-remove-active {
+				transition: opacity cubic-bezier(.36,.09,.83,.67) .5s, top .5s !important;
+				opacity: 1;
+				top: 0px;
+				position: relative;
+			}
 			@include mobile {
 				flex-basis: 33.3333%;
 			}
@@ -72,3 +87,6 @@
 	}
 	
 }
+
+
+

@@ -1,6 +1,6 @@
 (function () {
 
-	angular.module('app', ['ngRoute','ngProgressLite']);
+	angular.module('app', ['ngRoute','ngProgressLite','ngAnimate']);
 
 })();
 (function () {
@@ -134,6 +134,23 @@
 (function(){
 
 	angular.module('app')
+		.directive('contact', function(){
+			return {
+				restrict: "A",
+				controller: ['$scope', '$http', 'ngProgressLite', function($scope, $http, ngProgressLite){
+					ngProgressLite.start();
+					$http.get('/api/contact').success(function(response){
+						$scope.about = response.about;
+						ngProgressLite.done();
+					});
+				}]
+			}
+		})
+
+})();
+(function(){
+
+	angular.module('app')
 		.directive('slickSlider', function($timeout){
 			return {
 				restrict: 'A',
@@ -157,23 +174,6 @@
 			}
 		});
 		
-})();
-(function(){
-
-	angular.module('app')
-		.directive('contact', function(){
-			return {
-				restrict: "A",
-				controller: ['$scope', '$http', 'ngProgressLite', function($scope, $http, ngProgressLite){
-					ngProgressLite.start();
-					$http.get('/api/contact').success(function(response){
-						$scope.about = response.about;
-						ngProgressLite.done();
-					});
-				}]
-			}
-		})
-
 })();
 (function(){
 
@@ -229,5 +229,6 @@
 				}]
 			}
 		})
+
 
 })();

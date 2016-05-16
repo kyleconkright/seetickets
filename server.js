@@ -46,6 +46,12 @@ app.get('/api/partners', function(req, res) {
 });
 
 
+app.get('/api/didyouknow', function(req, res) {
+	request.get(url+'didyouknow.json', function (error, response, body) {
+		console.log(body);
+		res.json(JSON.parse(body));
+	});
+});
 
 
 

@@ -4,10 +4,10 @@
 		.directive('contact', function(){
 			return {
 				restrict: "A",
-				controller: ['$scope', '$http', 'ngProgressLite', function($scope, $http, ngProgressLite){
+				controller: ['$scope', '$http', 'ngProgressLite', '$sce', function($scope, $http, ngProgressLite, $sce){
 					ngProgressLite.start();
 					$http.get('/api/contact').success(function(response){
-						$scope.about = response.about;
+						$scope.contact = $sce.trustAsHtml(response);
 						ngProgressLite.done();
 					});
 				}]

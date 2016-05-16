@@ -12,9 +12,13 @@
 			@include mobile {
 				flex-direction: column;
 			}
-			div.address {
+			div.contact {
 				font-size: .8em;
 				color: $lightGrey*.65;
+				a {
+					display: block;
+					margin: 0 0 $space/2 0; 
+				}
 				address {
 					font-style: normal;
 					margin: $space/2 0;

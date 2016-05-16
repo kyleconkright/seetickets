@@ -1,0 +1,31 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+
+
+.dyk {
+	background: #f3f3f3;
+	color: #666;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: .85em;
+	span {
+		display: inline-block;
+		margin: 0 $space 0 0;
+		font-style: italic;
+		font-weight: 700;
+		color: $brandDark;
+		background: $seeblue;
+		color: white;
+		padding: $space $space;
+	}
+	i {
+		font-size: 1.25em;
+		position: relative;
+		color: #999;
+		top: -2px;
+		display: none;
+	}
+}

@@ -33,6 +33,25 @@
 	}]);
 
 })();
+(function(){
+	angular.module('app')
+		.directive('dyk', function(){
+			return {
+				restrict: "A",
+				templateUrl: "app/shared/dyk/dyk.html",
+				controller: ['$scope', '$http','$sce', function($scope, $http, $sce){
+					$http.get('/api/didyouknow').success(function(response){
+						function randNum(min, max) {
+						  return Math.round(Math.random() * (max - min) + min);
+						}
+						// alert(randNum(0, response.length - 1));
+						$scope.dyk = response[randNum(0, response.length - 1)];
+					});
+				}]
+			}
+		})
+
+})();
 (function () {
 	angular.module('app')
 		.directive('myActiveLink', function($location) {
@@ -57,7 +76,7 @@
 
 	var checkScroll = function(a) {
 		var scroll = $(window).scrollTop();
-		if (scroll >= 100) {
+		if (scroll >= 300) {
 			a.removeClass("light");
 		} else {
 			a.addClass("light");
@@ -137,10 +156,10 @@
 		.directive('contact', function(){
 			return {
 				restrict: "A",
-				controller: ['$scope', '$http', 'ngProgressLite', function($scope, $http, ngProgressLite){
+				controller: ['$scope', '$http', 'ngProgressLite', '$sce', function($scope, $http, ngProgressLite, $sce){
 					ngProgressLite.start();
 					$http.get('/api/contact').success(function(response){
-						$scope.about = response.about;
+						$scope.contact = $sce.trustAsHtml(response);
 						ngProgressLite.done();
 					});
 				}]
@@ -181,10 +200,10 @@
 		.directive('insights', function(){
 			return {
 				restrict: "A",
-				controller: ['$scope', '$http', 'ngProgressLite', function($scope, $http, ngProgressLite){
+				controller: ['$scope', '$http', '$sce', 'ngProgressLite', function($scope, $http, $sce, ngProgressLite){
 					ngProgressLite.start();
 					$http.get('/api/insights').success(function(response){
-						$scope.about = response.about;
+						$scope.insights = $sce.trustAsHtml(response);
 						ngProgressLite.done();
 					});
 				}]
@@ -230,5 +249,22 @@
 			}
 		})
 
+
+})();
+(function(){
+
+	angular.module('app')
+		.directive('solutions', function(){
+			return {
+				restrict: "A",
+				controller: ['$scope', '$http', '$sce', 'ngProgressLite', function($scope, $http, $sce, ngProgressLite){
+					ngProgressLite.start();
+					$http.get('/api/solutions').success(function(response){
+						$scope.solutions = $sce.trustAsHtml(response);
+						ngProgressLite.done();
+					});
+				}]
+			}
+		})
 
 })();

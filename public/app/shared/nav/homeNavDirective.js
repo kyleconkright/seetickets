@@ -2,7 +2,7 @@
 
 	var checkScroll = function(a) {
 		var scroll = $(window).scrollTop();
-		if (scroll >= 100) {
+		if (scroll >= 300) {
 			a.removeClass("light");
 		} else {
 			a.addClass("light");

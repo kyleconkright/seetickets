@@ -72,7 +72,7 @@
 			&.ng-hide {
 				opacity: 0;
 				position: relative;
-				top: 0px;
+				top: -5px;
 			}
 			&.ng-hide-add-active {
 				transition: none;	
@@ -81,7 +81,7 @@
 			&.ng-hide-remove-active {
 				transition: opacity cubic-bezier(.36,.09,.83,.67) .5s, top .5s !important;
 				opacity: 1;
-				top: 5px;
+				top: 0px;
 				position: relative;
 			}
 			@include mobile {

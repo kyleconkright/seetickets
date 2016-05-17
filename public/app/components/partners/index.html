@@ -7,7 +7,7 @@
 	</ul>
 
 	<ul class="logos">
-		<li ng-repeat="brand in brands" ng-show="isSelected(brand.category)"><img ng-src="{{brand.logo}}"></li>
+		<li ng-repeat="brand in brands" ng-show="isSelected(brand.category)"><img ng-src="{{brand.logo}}"><p>{{brand.name}}</p></li>
 	</ul>
 
 </div>

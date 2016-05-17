@@ -87,6 +87,9 @@
 			@include mobile {
 				flex-basis: 33.3333%;
 			}
+			p {
+				font-size: .7em;
+			}
 			img {
 				width: 100%;
 			}

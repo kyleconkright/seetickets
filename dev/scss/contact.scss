@@ -3,29 +3,38 @@
 
 
 
-.contact {
-
+.container.contact {
+	margin: 0 auto;
+	background: #0d9a9a url('http://www.kyleconkright.com/seetickets/cr2.png') no-repeat 90%;
+	background-size: contain;
+	width: 100%;
+	text-align: center;
+	@include tablet {
+		background: #0d9a9a;
+	}
 	.holder {
 		display: flex;
+		min-height: 50vh;
+		align-items: center;
+		width: 60%;
+		color: white;
+		margin: $space*10 auto $space*4;
 		@include tablet {
-			flex-direction: column;
+			justify-content: center;
 		}
-		> * {
-			flex: 1;
+		address {
+			margin: 0 0 $space*4;
 		}
-		h1:not(:first-child) {
-			margin: $space*3 0 $space;
-		}
-		img {
-			max-width: 100%;
-		}
-		.sidebar {
-			flex: .5;
-			padding: $space $space*2 $space*2 0;
-			h4 {
-				color: $brandHighlight;
-			}		
+		div a {
+			display: block;
+			margin: 0 0 $space;
+			font-size: 1.5em;
+			i {
+				display: block;
+			}
+			@include tablet {
+				font-size: 1.25em;
+			}
 		}
 	}
-	
 }

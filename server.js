@@ -9,7 +9,7 @@ var app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-var url = 'http://www.kyleconkright.com/seetickets/';
+var url = 'http://cdn.seeticketsus.com/';
 
 
 app.get('/api/slides', function(req, res) {

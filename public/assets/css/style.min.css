@@ -43,6 +43,8 @@
     width: 60%;
     color: white;
     margin: 10rem auto 4rem; }
+    .container.contact .holder h1 {
+      margin: 0 0 2rem; }
     @media handheld, screen and (max-width: 769px) {
       .container.contact .holder {
         -webkit-justify-content: center;

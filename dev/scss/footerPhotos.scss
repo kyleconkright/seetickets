@@ -1,0 +1,21 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+.footer-photos {
+	ul {
+		display: flex;
+		margin: 0 0 0 1px;
+		li {
+			flex: 1;
+			display: block;
+			background-size: cover;
+			background-position: center;
+			margin: 0 1px 0 0;
+			&:after {
+				content: '';
+				display: block;
+				padding-bottom: 66%;
+			}
+		}
+	}
+}

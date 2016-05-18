@@ -13,7 +13,6 @@ var url = 'http://cdn.seeticketsus.com/';
 
 
 app.get('/api/slides', function(req, res) {
-	
 	request.get(url+'slides.json', function (error, response, body) {
 	    if (!error && response.statusCode == 200) {
 	        var slides = JSON.parse(body);
@@ -61,6 +60,18 @@ app.get('/api/contact', function(req, res) {
 app.get('/api/didyouknow', function(req, res) {
 	request.get(url+'didyouknow.json', function (error, response, body) {
 		res.json(JSON.parse(body));
+	});
+});
+
+app.get('/api/footerphotos', function(req, res) {
+	request.get(url+'footerphotos.json', function (error, response, body) {
+	    if (!error && response.statusCode == 200) {
+	        var footerphotos = JSON.parse(body);
+	        for(var i in footerphotos) {
+				footerphotos[i] = url+'footerphotos/'+footerphotos[i];
+			}
+	        res.json(footerphotos);
+	    }
 	});
 });
 

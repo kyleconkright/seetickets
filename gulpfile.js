@@ -41,5 +41,6 @@ gulp.task('app', function() {
 gulp.task('watch', function(){
 	gulp.watch('dev/scss/*.scss', ['style']);
 	gulp.watch('dev/js/*.js', ['scripts']);
-	gulp.watch('public/**/*.js', ['app']);
+	gulp.watch('public/shared/**/*.js', ['app']);
+	gulp.watch('public/components/**/*.js', ['app']);
 })

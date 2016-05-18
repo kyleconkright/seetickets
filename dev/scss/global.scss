@@ -36,7 +36,19 @@ body {
 		font-style: italic;
 	}
 }
-
+h1 {
+	padding: 0;
+	background: $brandDark2;
+	color: white;
+	display: inline-block;
+	font-weight: 200;
+	text-transform: uppercase;
+	padding: $space $space*2;
+	letter-spacing: .075em;
+	font-size: 2.2em;
+	position: relative;
+	transform: skew(-7deg);
+}
 h1, h4 {
 	margin: 0 0 $space;
 }

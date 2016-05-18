@@ -11,7 +11,7 @@
 
 <div class="dyk" dyk></div>
 
-<div class="container partners" partners>
+<div class="container partners home" partners>
 	<h1>Partners</h1>
 	<p>{{partners.subheader}}</p>
 	<ul class="categories">
@@ -23,5 +23,10 @@
 	<ul class="logos">
 		<li ng-repeat="brand in brands" ng-show="isSelected(brand.category)"><img ng-src="{{brand.logo}}"></li>
 	</ul>
+</div>
+
+<div class="solutions container home" solutions>
+	<h1>Solutions</h1>	
+	<div ng-bind-html="solutions"></div>
 </div>
 

@@ -27,5 +27,21 @@
 			}		
 		}
 	}
-	
+}
+
+.container.solutions.home {
+	text-align: center;
+	margin: 0 auto $space*5;
+	h2, h3 {
+		margin: 0 0 $space;
+	}
+	h4 {
+		text-transform: uppercase;
+		font-weight: 700;
+		margin: $space*2 0 $space/2 0;
+	}
+	div {
+		width: 80%;
+		margin: 0 auto;
+	}
 }

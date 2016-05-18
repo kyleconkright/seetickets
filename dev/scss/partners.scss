@@ -31,14 +31,13 @@
 			text-transform: capitalize;
 			flex: 1;
 			min-height: 4rem;
-			padding: 0 $space/2;
-			@include mobile {
-			}
-			a {
-			
-				border-radius: 2px;
-				@include mobile {
-					padding: $space/3 $space/2;
+			h3 {
+				margin: $space $space/2;
+				a {
+					border-radius: 2px;
+					@include mobile {
+						padding: $space/3 $space/2;
+					}
 				}
 			}
 			&.active {

@@ -6,9 +6,9 @@
 	margin: $space*5 auto 0;
 	text-align: center;
 	p {
-		padding: $space*2;
+		// padding: $space*2;
 		font-size: 1.5em;
-		line-height: 1.75em;
+		// line-height: 1.75em;
 		color: $brandDark2/.6;
 		@include mobile {
 			padding: 0;

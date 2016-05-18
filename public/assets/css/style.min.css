@@ -1,28 +1,3 @@
-.about .holder {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
-  @media handheld, screen and (max-width: 769px) {
-    .about .holder {
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column; } }
-  .about .holder > * {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1; }
-  .about .holder h1:not(:first-child) {
-    margin: 3rem 0 1rem; }
-  .about .holder img {
-    max-width: 100%; }
-  .about .holder .sidebar {
-    -webkit-flex: .5;
-    -ms-flex: .5;
-    flex: .5;
-    padding: 1rem 2rem 2rem 0; }
-    .about .holder .sidebar h4 {
-      color: #0C9A9A; }
-
 .dyk {
   background: #f3f3f3;
   color: #666;
@@ -66,6 +41,87 @@
     color: #999;
     top: -2px;
     display: none; }
+
+.about .holder {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  @media handheld, screen and (max-width: 769px) {
+    .about .holder {
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
+  .about .holder > * {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+  .about .holder h1:not(:first-child) {
+    margin: 3rem 0 1rem; }
+  .about .holder img {
+    max-width: 100%; }
+  .about .holder .sidebar {
+    -webkit-flex: .5;
+    -ms-flex: .5;
+    flex: .5;
+    padding: 1rem 2rem 2rem 0; }
+    .about .holder .sidebar h4 {
+      color: #0C9A9A; }
+
+.container.contact {
+  margin: 0 auto;
+  background: #0d9a9a url("http://cdn.seeticketsus.com/cr2.png") no-repeat 90%;
+  background-size: contain;
+  width: 100%;
+  text-align: center; }
+  @media handheld, screen and (max-width: 769px) {
+    .container.contact {
+      background: #0d9a9a; } }
+  .container.contact .holder {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 50vh;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 60%;
+    color: white;
+    margin: 10rem auto 4rem; }
+    @media handheld, screen and (max-width: 769px) {
+      .container.contact .holder {
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center; } }
+    .container.contact .holder address {
+      margin: 0 0 4rem; }
+    .container.contact .holder div a {
+      display: block;
+      margin: 0 0 1rem;
+      font-size: 1.5em; }
+      .container.contact .holder div a i {
+        display: block;
+        margin: 0 0 3px; }
+      @media handheld, screen and (max-width: 769px) {
+        .container.contact .holder div a {
+          font-size: 1.25em; } }
+
+.footer-photos ul {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 0 1px; }
+  .footer-photos ul li {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: block;
+    background-size: cover;
+    background-position: center;
+    margin: 0 1px 0 0; }
+    .footer-photos ul li:after {
+      content: '';
+      display: block;
+      padding-bottom: 66%; }
 
 .bottom-nav {
   background: #041928;
@@ -123,62 +179,6 @@
         height: 16px;
         display: inline-block;
         opacity: .5; }
-
-.footer-photos ul {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 0 0 1px; }
-  .footer-photos ul li {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    display: block;
-    background-size: cover;
-    background-position: center;
-    margin: 0 1px 0 0; }
-    .footer-photos ul li:after {
-      content: '';
-      display: block;
-      padding-bottom: 66%; }
-
-.container.contact {
-  margin: 0 auto;
-  background: #0d9a9a url("http://cdn.seeticketsus.com/cr2.png") no-repeat 90%;
-  background-size: contain;
-  width: 100%;
-  text-align: center; }
-  @media handheld, screen and (max-width: 769px) {
-    .container.contact {
-      background: #0d9a9a; } }
-  .container.contact .holder {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    min-height: 50vh;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 60%;
-    color: white;
-    margin: 10rem auto 4rem; }
-    @media handheld, screen and (max-width: 769px) {
-      .container.contact .holder {
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center; } }
-    .container.contact .holder address {
-      margin: 0 0 4rem; }
-    .container.contact .holder div a {
-      display: block;
-      margin: 0 0 1rem;
-      font-size: 1.5em; }
-      .container.contact .holder div a i {
-        display: block;
-        margin: 0 0 3px; }
-      @media handheld, screen and (max-width: 769px) {
-        .container.contact .holder div a {
-          font-size: 1.25em; } }
 
 * {
   padding: 0;
@@ -375,35 +375,11 @@ div.top-nav {
         div.top-nav nav a.mobile-menu-trigger i {
           font-size: 28px; } }
 
-.ngProgressLite {
-  pointer-events: none; }
-
-.ngProgressLiteBar {
-  background: #29d;
-  position: fixed;
-  z-index: 99999;
-  top: 0;
-  left: 0;
-  height: 2px; }
-
-.ngProgressLite .ngProgressLiteBarShadow {
-  display: block;
-  position: absolute;
-  right: 0px;
-  width: 100px;
-  height: 100%;
-  box-shadow: 0 0 10px #29d, 0 0 5px #29d;
-  opacity: 1;
-  -webkit-transform: rotate(3deg) translate(0px, -4px);
-  transform: rotate(3deg) translate(0px, -4px); }
-
 .partners.container {
   margin: 5rem auto 0;
   text-align: center; }
   .partners.container p {
-    padding: 2rem;
     font-size: 1.5em;
-    line-height: 1.75em;
     color: #072a43; }
     @media handheld, screen and (max-width: 414px) {
       .partners.container p {
@@ -565,6 +541,28 @@ div.top-nav {
 
 .slick-arrow.slick-hidden {
   display: none; }
+
+.ngProgressLite {
+  pointer-events: none; }
+
+.ngProgressLiteBar {
+  background: #29d;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  height: 2px; }
+
+.ngProgressLite .ngProgressLiteBarShadow {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+  opacity: 1;
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px); }
 
 ul.slider {
   height: 600px;

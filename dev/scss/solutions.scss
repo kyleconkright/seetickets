@@ -1,34 +1,13 @@
 @import 'mixins.scss';
 @import 'variables.scss';
 
-.container.solutions {
-	.section-header div.holder {
-		display: flex;
-		padding: $space $space*2;
-		// flex-direction: column;
-		text-align: left;
-		background: $lightBorder;
-		color: white;
-		align-items: center;
-		h1, h2, h3 {
-			background: none;
-			padding: 0;
-			margin: 0;
-			transform: none;
-			font-weight: 100;
-		}
-		div {
-			flex: 2;
-		}
-		a {
-			text-align: right;
-		}
-	}
-}
 
 .container.solutions {
 	text-align: center;
 	margin: $space*6 auto;
+	&.home {
+		margin: $space auto $space*6;	
+	}
 	a.btn {
 		font-size: .9em;
 		margin: $space*2 0;

@@ -3,10 +3,16 @@
 
 .partners.container {
 	// min-height: 60vh;
-	margin: $space*5 auto 0;
+	margin: $space*7 auto 0;
 	text-align: center;
+	&.home {
+		margin: $space*2 auto 0;
+		p {
+			padding: $space*2;
+		}
+	}
 	p {
-		// padding: $space*2;
+		
 		font-size: 1.5em;
 		// line-height: 1.75em;
 		color: $brandDark2/.6;

@@ -1,41 +1,3 @@
-.container.contact {
-  margin: 0 auto;
-  background: #0d9a9a url("http://cdn.seeticketsus.com/cr2.png") no-repeat 90%;
-  background-size: contain;
-  width: 100%;
-  text-align: center; }
-  @media handheld, screen and (max-width: 769px) {
-    .container.contact {
-      background: #0d9a9a; } }
-  .container.contact .holder {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    min-height: 50vh;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 60%;
-    color: white;
-    margin: 10rem auto 4rem; }
-    @media handheld, screen and (max-width: 769px) {
-      .container.contact .holder {
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center; } }
-    .container.contact .holder address {
-      margin: 0 0 4rem; }
-    .container.contact .holder div a {
-      display: block;
-      margin: 0 0 1rem;
-      font-size: 1.5em; }
-      .container.contact .holder div a i {
-        display: block;
-        margin: 0 0 3px; }
-      @media handheld, screen and (max-width: 769px) {
-        .container.contact .holder div a {
-          font-size: 1.25em; } }
-
 .dyk {
   background: #f3f3f3;
   color: #666;
@@ -162,6 +124,66 @@
     .about .holder .sidebar h4 {
       color: #0C9A9A; }
 
+.container.contact {
+  margin: 0 auto;
+  background: #0d9a9a url("http://cdn.seeticketsus.com/cr2.png") no-repeat 90%;
+  background-size: contain;
+  width: 100%;
+  text-align: center; }
+  @media handheld, screen and (max-width: 769px) {
+    .container.contact {
+      background: #0d9a9a; } }
+  .container.contact .holder {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 50vh;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 60%;
+    color: white;
+    margin: 10rem auto 4rem; }
+    @media handheld, screen and (max-width: 769px) {
+      .container.contact .holder {
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center; } }
+    .container.contact .holder address {
+      margin: 0 0 4rem; }
+    .container.contact .holder div a {
+      display: block;
+      margin: 0 0 1rem;
+      font-size: 1.5em; }
+      .container.contact .holder div a i {
+        display: block;
+        margin: 0 0 3px; }
+      @media handheld, screen and (max-width: 769px) {
+        .container.contact .holder div a {
+          font-size: 1.25em; } }
+
+.ngProgressLite {
+  pointer-events: none; }
+
+.ngProgressLiteBar {
+  background: #29d;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  height: 2px; }
+
+.ngProgressLite .ngProgressLiteBarShadow {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+  opacity: 1;
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px); }
+
 div.top-nav {
   position: fixed;
   top: -1px;
@@ -286,28 +308,6 @@ div.top-nav {
     .insights .holder .sidebar h4 {
       color: #0C9A9A; }
 
-.ngProgressLite {
-  pointer-events: none; }
-
-.ngProgressLiteBar {
-  background: #29d;
-  position: fixed;
-  z-index: 99999;
-  top: 0;
-  left: 0;
-  height: 2px; }
-
-.ngProgressLite .ngProgressLiteBarShadow {
-  display: block;
-  position: absolute;
-  right: 0px;
-  width: 100px;
-  height: 100%;
-  box-shadow: 0 0 10px #29d, 0 0 5px #29d;
-  opacity: 1;
-  -webkit-transform: rotate(3deg) translate(0px, -4px);
-  transform: rotate(3deg) translate(0px, -4px); }
-
 * {
   padding: 0;
   margin: 0;
@@ -379,6 +379,31 @@ p {
     position: relative;
     top: 4px; }
 
+.container.solutions .section-header div.holder {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 2rem;
+  text-align: left;
+  background: #E6E6E6;
+  color: white;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .container.solutions .section-header div.holder h1, .container.solutions .section-header div.holder h2, .container.solutions .section-header div.holder h3 {
+    background: none;
+    padding: 0;
+    margin: 0;
+    -webkit-transform: none;
+    transform: none;
+    font-weight: 100; }
+  .container.solutions .section-header div.holder div {
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2; }
+  .container.solutions .section-header div.holder a {
+    text-align: right; }
+
 .container.solutions {
   text-align: center;
   margin: 6rem auto; }
@@ -388,7 +413,7 @@ p {
     letter-spacing: .05em;
     text-transform: capitalize;
     font-weight: 300; }
-  .container.solutions div.info {
+  .container.solutions section.info {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -396,11 +421,11 @@ p {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
     @media handheld, screen and (max-width: 769px) {
-      .container.solutions div.info {
+      .container.solutions section.info {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column; } }
-    .container.solutions div.info div {
+    .container.solutions section.info div {
       -webkit-flex: 1;
       -ms-flex: 1;
       flex: 1;
@@ -409,7 +434,7 @@ p {
       flex-basis: 33.3333%;
       padding: 0 2rem;
       line-height: 1.5em; }
-      .container.solutions div.info div i {
+      .container.solutions section.info div i {
         font-size: 2em;
         background: #0c9a9a;
         color: white;
@@ -422,81 +447,6 @@ p {
     text-transform: uppercase;
     font-weight: 700;
     margin: 1rem 0; }
-
-ul.slider {
-  height: 600px;
-  overflow: hidden; }
-  ul.slider li {
-    display: block;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 600px; }
-    ul.slider li img {
-      width: 100%; }
-  ul.slider button.slick-arrow {
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 5%;
-    background: none;
-    cursor: pointer;
-    border: none; }
-    ul.slider button.slick-arrow.slick-next {
-      right: 0; }
-    ul.slider button.slick-arrow.slick-prev {
-      left: 0; }
-  @media handheld, screen and (max-width: 769px) {
-    ul.slider {
-      height: 500px; }
-      ul.slider li {
-        height: 500px; } }
-  @media handheld, screen and (max-width: 414px) {
-    ul.slider {
-      height: 400px; }
-      ul.slider li {
-        height: 400px; } }
-
-.nav-holder {
-  background: #4993f4;
-  color: white;
-  text-transform: uppercase;
-  font-weight: 200;
-  font-size: 3em;
-  width: 40%;
-  margin: -12rem 0 0 0;
-  position: absolute;
-  right: 0;
-  padding: 2rem 2rem 1.5rem; }
-  .nav-holder img {
-    height: 48px;
-    float: left;
-    margin: 0 15px 0 0; }
-  .nav-holder:before {
-    content: ' ';
-    display: block;
-    background: #4993f4;
-    width: 19px;
-    height: 100%;
-    position: absolute;
-    left: -7px;
-    top: 0;
-    -webkit-transform: skew(-7deg);
-    transform: skew(-7deg); }
-  @media handheld, screen and (max-width: 769px) {
-    .nav-holder {
-      margin: -4rem 0 0 0;
-      width: 60%;
-      padding: 1rem 1rem 0.5rem;
-      font-size: 2em; }
-      .nav-holder img {
-        height: 32px; } }
-  @media handheld, screen and (max-width: 414px) {
-    .nav-holder {
-      width: 100%;
-      position: relative;
-      margin: 0; } }
 
 .partners.container {
   margin: 5rem auto 0;
@@ -666,3 +616,78 @@ ul.slider {
 
 .slick-arrow.slick-hidden {
   display: none; }
+
+ul.slider {
+  height: 600px;
+  overflow: hidden; }
+  ul.slider li {
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px; }
+    ul.slider li img {
+      width: 100%; }
+  ul.slider button.slick-arrow {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 5%;
+    background: none;
+    cursor: pointer;
+    border: none; }
+    ul.slider button.slick-arrow.slick-next {
+      right: 0; }
+    ul.slider button.slick-arrow.slick-prev {
+      left: 0; }
+  @media handheld, screen and (max-width: 769px) {
+    ul.slider {
+      height: 500px; }
+      ul.slider li {
+        height: 500px; } }
+  @media handheld, screen and (max-width: 414px) {
+    ul.slider {
+      height: 400px; }
+      ul.slider li {
+        height: 400px; } }
+
+.nav-holder {
+  background: #4993f4;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 3em;
+  width: 40%;
+  margin: -12rem 0 0 0;
+  position: absolute;
+  right: 0;
+  padding: 2rem 2rem 1.5rem; }
+  .nav-holder img {
+    height: 48px;
+    float: left;
+    margin: 0 15px 0 0; }
+  .nav-holder:before {
+    content: ' ';
+    display: block;
+    background: #4993f4;
+    width: 19px;
+    height: 100%;
+    position: absolute;
+    left: -7px;
+    top: 0;
+    -webkit-transform: skew(-7deg);
+    transform: skew(-7deg); }
+  @media handheld, screen and (max-width: 769px) {
+    .nav-holder {
+      margin: -4rem 0 0 0;
+      width: 60%;
+      padding: 1rem 1rem 0.5rem;
+      font-size: 2em; }
+      .nav-holder img {
+        height: 32px; } }
+  @media handheld, screen and (max-width: 414px) {
+    .nav-holder {
+      width: 100%;
+      position: relative;
+      margin: 0; } }

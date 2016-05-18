@@ -1,7 +1,30 @@
 @import 'mixins.scss';
 @import 'variables.scss';
 
-
+.container.solutions {
+	.section-header div.holder {
+		display: flex;
+		padding: $space $space*2;
+		// flex-direction: column;
+		text-align: left;
+		background: $lightBorder;
+		color: white;
+		align-items: center;
+		h1, h2, h3 {
+			background: none;
+			padding: 0;
+			margin: 0;
+			transform: none;
+			font-weight: 100;
+		}
+		div {
+			flex: 2;
+		}
+		a {
+			text-align: right;
+		}
+	}
+}
 
 .container.solutions {
 	text-align: center;
@@ -13,7 +36,7 @@
 		text-transform: capitalize;
 		font-weight: 300;
 	}
-	div.info {
+	section.info {
 		display: flex;
 		flex-wrap: wrap;
 		@include tablet {

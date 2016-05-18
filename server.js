@@ -52,6 +52,18 @@ app.get('/api/partners', function(req, res) {
 	});
 });
 
+app.get('/api/partners-home', function(req, res) {
+	request.get(url+'partners-home.json', function (error, response, body) {
+	    if (!error && response.statusCode == 200) {
+	        var data = JSON.parse(body);
+            for(var i in data.partners) {
+    			data.partners[i] = url+'partners/'+data.partners[i];
+    		}
+	        res.json(data);
+	    }
+	});
+});
+
 app.get('/api/contact', function(req, res) {
 	request(url+'contact.html').pipe(res);
 });

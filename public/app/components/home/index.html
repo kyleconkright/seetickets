@@ -18,17 +18,12 @@
 </div>
 
 
-<div class="container partners home" partners>
+<div class="container partners home" partners-home>
 	<h1>Partners</h1>
 	<p>{{partners.subheader}}</p>
-	<ul class="categories">
-		<li ng-class="{active:isSelected(partner.category)}" ng-repeat="partner in partners.partners" ng-click="showLogos(partner.category)">
-			<h3><a href>{{partner.category}}</a></h3>
-		</li>
-	</ul>
 
 	<ul class="logos">
-		<li ng-repeat="brand in brands" ng-show="isSelected(brand.category)"><img ng-src="{{brand.logo}}"></li>
+		<li ng-repeat="brand in brands"><img ng-src="{{brand}}"></li>
 	</ul>
 </div>
 

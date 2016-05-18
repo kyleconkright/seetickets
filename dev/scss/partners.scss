@@ -5,12 +5,6 @@
 	// min-height: 60vh;
 	margin: $space*7 auto 0;
 	text-align: center;
-	&.home {
-		margin: $space*2 auto 0;
-		p {
-			padding: $space*2;
-		}
-	}
 	p {
 		
 		font-size: 1.5em;
@@ -93,7 +87,21 @@
 			}
 		}
 	}
-	
+	//PARTNERS ON HOME PAGE
+	&.home {
+		margin: $space*2 auto;
+		p {
+			padding: $space*2 $space 0;
+		}
+		ul.logos {
+			li {
+				flex-basis: 25%;
+				@include mobile {
+					flex-basis: 50%;
+				}
+			}
+		}
+	}
 }
 
 

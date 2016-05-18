@@ -1,112 +1,3 @@
-.about .holder {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
-  @media handheld, screen and (max-width: 769px) {
-    .about .holder {
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column; } }
-  .about .holder > * {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1; }
-  .about .holder h1:not(:first-child) {
-    margin: 3rem 0 1rem; }
-  .about .holder img {
-    max-width: 100%; }
-  .about .holder .sidebar {
-    -webkit-flex: .5;
-    -ms-flex: .5;
-    flex: .5;
-    padding: 1rem 2rem 2rem 0; }
-    .about .holder .sidebar h4 {
-      color: #0C9A9A; }
-
-.container.contact {
-  margin: 0 auto;
-  background: #0d9a9a url("http://cdn.seeticketsus.com/cr2.png") no-repeat 90%;
-  background-size: contain;
-  width: 100%;
-  text-align: center; }
-  @media handheld, screen and (max-width: 769px) {
-    .container.contact {
-      background: #0d9a9a; } }
-  .container.contact .holder {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    min-height: 50vh;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 60%;
-    color: white;
-    margin: 10rem auto 4rem; }
-    .container.contact .holder h1 {
-      margin: 0 0 2rem; }
-    @media handheld, screen and (max-width: 769px) {
-      .container.contact .holder {
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center; } }
-    .container.contact .holder address {
-      margin: 0 0 4rem; }
-    .container.contact .holder div a {
-      display: block;
-      margin: 0 0 1rem;
-      font-size: 1.5em; }
-      .container.contact .holder div a i {
-        display: block;
-        margin: 0 0 3px; }
-      @media handheld, screen and (max-width: 769px) {
-        .container.contact .holder div a {
-          font-size: 1.25em; } }
-
-.dyk {
-  background: #f3f3f3;
-  color: #666;
-  width: 100%;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-  font-size: .85em;
-  padding: 0 1rem; }
-  @media handheld, screen and (max-width: 769px) {
-    .dyk {
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      padding: 1rem; } }
-  .dyk span {
-    display: inline-block;
-    margin: 0 1rem 0 0;
-    font-style: italic;
-    font-weight: 700;
-    color: #001926;
-    background: #4993f4;
-    color: white;
-    padding: 1rem 1rem; }
-    @media handheld, screen and (max-width: 769px) {
-      .dyk span {
-        margin: 0;
-        padding: 0 0 0.5rem;
-        background: transparent;
-        color: inherit; } }
-  .dyk i {
-    font-size: 1.25em;
-    position: relative;
-    color: #999;
-    top: -2px;
-    display: none; }
-
 .bottom-nav {
   background: #041928;
   color: #EEEEEE;
@@ -163,6 +54,115 @@
         height: 16px;
         display: inline-block;
         opacity: .5; }
+
+.dyk {
+  background: #f3f3f3;
+  color: #666;
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  font-size: .85em;
+  padding: 0 1rem; }
+  @media handheld, screen and (max-width: 769px) {
+    .dyk {
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding: 1rem; } }
+  .dyk span {
+    display: inline-block;
+    margin: 0 1rem 0 0;
+    font-style: italic;
+    font-weight: 700;
+    color: #001926;
+    background: #4993f4;
+    color: white;
+    padding: 1rem 1rem; }
+    @media handheld, screen and (max-width: 769px) {
+      .dyk span {
+        margin: 0;
+        padding: 0 0 0.5rem;
+        background: transparent;
+        color: inherit; } }
+  .dyk i {
+    font-size: 1.25em;
+    position: relative;
+    color: #999;
+    top: -2px;
+    display: none; }
+
+.container.contact {
+  margin: 0 auto;
+  background: #0d9a9a url("http://cdn.seeticketsus.com/cr2.png") no-repeat 90%;
+  background-size: contain;
+  width: 100%;
+  text-align: center; }
+  @media handheld, screen and (max-width: 769px) {
+    .container.contact {
+      background: #0d9a9a; } }
+  .container.contact .holder {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 50vh;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 60%;
+    color: white;
+    margin: 10rem auto 4rem; }
+    .container.contact .holder h1 {
+      margin: 0 0 2rem; }
+    @media handheld, screen and (max-width: 769px) {
+      .container.contact .holder {
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center; } }
+    .container.contact .holder address {
+      margin: 0 0 4rem; }
+    .container.contact .holder div a {
+      display: block;
+      margin: 0 0 1rem;
+      font-size: 1.5em; }
+      .container.contact .holder div a i {
+        display: block;
+        margin: 0 0 3px; }
+      @media handheld, screen and (max-width: 769px) {
+        .container.contact .holder div a {
+          font-size: 1.25em; } }
+
+.about .holder {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  @media handheld, screen and (max-width: 769px) {
+    .about .holder {
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
+  .about .holder > * {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+  .about .holder h1:not(:first-child) {
+    margin: 3rem 0 1rem; }
+  .about .holder img {
+    max-width: 100%; }
+  .about .holder .sidebar {
+    -webkit-flex: .5;
+    -ms-flex: .5;
+    flex: .5;
+    padding: 1rem 2rem 2rem 0; }
+    .about .holder .sidebar h4 {
+      color: #0C9A9A; }
 
 .footer-photos ul {
   display: -webkit-flex;
@@ -377,35 +377,9 @@ div.top-nav {
         div.top-nav nav a.mobile-menu-trigger i {
           font-size: 28px; } }
 
-.ngProgressLite {
-  pointer-events: none; }
-
-.ngProgressLiteBar {
-  background: #29d;
-  position: fixed;
-  z-index: 99999;
-  top: 0;
-  left: 0;
-  height: 2px; }
-
-.ngProgressLite .ngProgressLiteBarShadow {
-  display: block;
-  position: absolute;
-  right: 0px;
-  width: 100px;
-  height: 100%;
-  box-shadow: 0 0 10px #29d, 0 0 5px #29d;
-  opacity: 1;
-  -webkit-transform: rotate(3deg) translate(0px, -4px);
-  transform: rotate(3deg) translate(0px, -4px); }
-
 .partners.container {
   margin: 7rem auto 0;
   text-align: center; }
-  .partners.container.home {
-    margin: 2rem auto 0; }
-    .partners.container.home p {
-      padding: 2rem; }
   .partners.container p {
     font-size: 1.5em;
     color: #072a43; }
@@ -500,6 +474,41 @@ div.top-nav {
         font-size: .7em; }
       .partners.container ul.logos li img {
         width: 100%; }
+  .partners.container.home {
+    margin: 2rem auto; }
+    .partners.container.home p {
+      padding: 2rem 1rem 0; }
+    .partners.container.home ul.logos li {
+      -webkit-flex-basis: 25%;
+      -ms-flex-preferred-size: 25%;
+      flex-basis: 25%; }
+      @media handheld, screen and (max-width: 414px) {
+        .partners.container.home ul.logos li {
+          -webkit-flex-basis: 50%;
+          -ms-flex-preferred-size: 50%;
+          flex-basis: 50%; } }
+
+.ngProgressLite {
+  pointer-events: none; }
+
+.ngProgressLiteBar {
+  background: #29d;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  height: 2px; }
+
+.ngProgressLite .ngProgressLiteBarShadow {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+  opacity: 1;
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px); }
 
 /* Slider */
 .slick-slider {
@@ -649,7 +658,7 @@ ul.slider {
   text-align: center;
   margin: 6rem auto; }
   .container.solutions.home {
-    margin: 1rem auto 6rem; }
+    margin: 2rem auto 4rem; }
   .container.solutions a.btn {
     font-size: .9em;
     margin: 2rem 0;

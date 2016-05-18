@@ -52,21 +52,6 @@
 		})
 
 })();
-(function(){
-	angular.module('app')
-		.directive('footerPhotos', function(){
-			return {
-				restrict: "A",
-				templateUrl: "app/shared/footer-photos/footer-photos.html",
-				controller: ['$scope', '$http', function($scope, $http){
-					$http.get('/api/footerphotos').success(function(response){
-						$scope.photos = response;
-					});
-				}]
-			}
-		})
-
-})();
 (function () {
 	angular.module('app')
 		.directive('myActiveLink', function($location) {
@@ -148,6 +133,21 @@
 
 })();
 (function(){
+	angular.module('app')
+		.directive('footerPhotos', function(){
+			return {
+				restrict: "A",
+				templateUrl: "app/shared/footer-photos/footer-photos.html",
+				controller: ['$scope', '$http', function($scope, $http){
+					$http.get('/api/footerphotos').success(function(response){
+						$scope.photos = response;
+					});
+				}]
+			}
+		})
+
+})();
+(function(){
 
 	angular.module('app')
 		.directive('about', function(){
@@ -158,23 +158,6 @@
 					$http.get('/api/about').success(function(response){
 						// $scope.about = response;
 						$scope.about = $sce.trustAsHtml(response);
-						ngProgressLite.done();
-					});
-				}]
-			}
-		})
-
-})();
-(function(){
-
-	angular.module('app')
-		.directive('contact', function(){
-			return {
-				restrict: "A",
-				controller: ['$scope', '$http', 'ngProgressLite', '$sce', function($scope, $http, ngProgressLite, $sce){
-					ngProgressLite.start();
-					$http.get('/api/contact').success(function(response){
-						$scope.contact = $sce.trustAsHtml(response);
 						ngProgressLite.done();
 					});
 				}]
@@ -212,6 +195,23 @@
 (function(){
 
 	angular.module('app')
+		.directive('contact', function(){
+			return {
+				restrict: "A",
+				controller: ['$scope', '$http', 'ngProgressLite', '$sce', function($scope, $http, ngProgressLite, $sce){
+					ngProgressLite.start();
+					$http.get('/api/contact').success(function(response){
+						$scope.contact = $sce.trustAsHtml(response);
+						ngProgressLite.done();
+					});
+				}]
+			}
+		})
+
+})();
+(function(){
+
+	angular.module('app')
 		.directive('insights', function(){
 			return {
 				restrict: "A",
@@ -219,6 +219,23 @@
 					ngProgressLite.start();
 					$http.get('/api/insights').success(function(response){
 						$scope.insights = $sce.trustAsHtml(response);
+						ngProgressLite.done();
+					});
+				}]
+			}
+		})
+
+})();
+(function(){
+
+	angular.module('app')
+		.directive('solutions', function(){
+			return {
+				restrict: "A",
+				controller: ['$scope', '$http', '$sce', 'ngProgressLite', function($scope, $http, $sce, ngProgressLite){
+					ngProgressLite.start();
+					$http.get('/api/solutions').success(function(response){
+						$scope.solutions = $sce.trustAsHtml(response);
 						ngProgressLite.done();
 					});
 				}]
@@ -269,17 +286,19 @@
 (function(){
 
 	angular.module('app')
-		.directive('solutions', function(){
+		.directive('partnersHome', function(){
 			return {
 				restrict: "A",
-				controller: ['$scope', '$http', '$sce', 'ngProgressLite', function($scope, $http, $sce, ngProgressLite){
+				controller: ['$scope', '$http', 'ngProgressLite', function($scope, $http, ngProgressLite){
 					ngProgressLite.start();
-					$http.get('/api/solutions').success(function(response){
-						$scope.solutions = $sce.trustAsHtml(response);
+					$http.get('/api/partners-home').success(function(response){
+						$scope.partners = response;
+						$scope.brands = response.partners;
 						ngProgressLite.done();
 					});
 				}]
 			}
 		})
+
 
 })();

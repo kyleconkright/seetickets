@@ -20,7 +20,7 @@ body {
 
 .container {
 	width: 80%;
-	margin: $space*6 auto;
+	margin: $space*8 auto;
 	padding: $space 0;
 	position: relative;
 	@include tablet {
@@ -49,7 +49,7 @@ h1 {
 	position: relative;
 	transform: skew(-7deg);
 }
-h1, h4 {
+h1, h2, h3, h4 {
 	margin: 0 0 $space;
 }
 h4 {

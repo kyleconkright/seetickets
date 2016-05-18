@@ -8,10 +8,10 @@ div.top-nav {
 	z-index: 1000;
 	nav {
 		border-bottom: 1px solid $lightBorder;
-		padding: $space/2 0;
 		background: white;
 		transition: .2s background;
 		.container {
+			height: $space*5;
 			margin: 0 auto;
 			display: flex;
 			align-items: center;
@@ -27,7 +27,6 @@ div.top-nav {
 				transition: .2s color, .2s border, .2s font-weight;
 				border: 1px solid transparent;
 				border-width: 0 0 1px 0;
-				padding: $space/4 0;
 			}
 			a.logo {
 				background: url('../images/st-logo-dark.png') no-repeat;

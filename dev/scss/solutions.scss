@@ -4,7 +4,6 @@
 
 
 .solutions {
-
 	.holder {
 		display: flex;
 		@include tablet {
@@ -32,6 +31,16 @@
 .container.solutions.home {
 	text-align: center;
 	margin: 0 auto $space*5;
+	div.info {
+		display: flex;
+		flex-wrap: wrap;
+		div {
+			flex: 1;
+			flex-basis: 33%;
+			padding: 0 $space*2;
+			text-align: left;
+		}
+	}
 	h2, h3 {
 		margin: 0 0 $space;
 	}
@@ -40,8 +49,5 @@
 		font-weight: 700;
 		margin: $space*2 0 $space/2 0;
 	}
-	div {
-		width: 80%;
-		margin: 0 auto;
-	}
+
 }

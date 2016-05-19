@@ -10,21 +10,21 @@
 		@include tablet {
 			flex-direction: column;
 		}
-		> * {
+		> *:not(.sidebar) {
 			flex: 1;
 		}
-		h1:not(:first-child) {
-			margin: $space*3 0 $space;
-		}
-		img {
-			max-width: 100%;
+		div {
+			ul {
+
+				li {
+					list-style-type: circle;
+					margin: 0 0 0 $space*1.2;
+					line-height: 1.5em;
+				}
+			}
 		}
 		.sidebar {
-			flex: .5;
-			padding: $space $space*2 $space*2 0;
-			h4 {
-				color: $brandHighlight;
-			}		
+			
 		}
 	}
 	

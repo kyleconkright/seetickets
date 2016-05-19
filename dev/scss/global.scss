@@ -49,6 +49,9 @@ h1 {
 	position: relative;
 	transform: skew(-7deg);
 }
+h2 {
+	font-weight: 700;
+}
 h1, h2, h3, h4 {
 	margin: 0 0 $space;
 }
@@ -79,5 +82,19 @@ p {
 		position: relative;
 		top: 4px;
 	}
+}
+
+
+.sidebar {
+	flex: .3;
+	padding: 0 $space*4 $space*2 0;
+	h4 {
+		color: $brandHighlight;
+		margin: $space/1.65 0 $space;
+	}
+	a {
+		font-weight: 700;
+		font-style: italic;
+	}		
 }
 

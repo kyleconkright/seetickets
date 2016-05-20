@@ -18,7 +18,7 @@ gulp.task('style', function() {
 	return sass('dev/scss/*.scss')
 		.pipe(concat('style.min.css'))
 		.pipe(autoprefixer({
-			browsers: ['last 2 versions'],
+			browsers: ['last 4 versions'],
 			cascade: false
 		}))
 		.pipe(gulp.dest('public/assets/css'));

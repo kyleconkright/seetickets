@@ -303,13 +303,13 @@
 (function(){
 
 	angular.module('app')
-		.directive('press', function(){
+		.directive('solutions', function(){
 			return {
 				restrict: "A",
 				controller: ['$scope', '$http', '$sce', 'ngProgressLite', function($scope, $http, $sce, ngProgressLite){
 					ngProgressLite.start();
-					$http.get('/api/press').success(function(response){
-						$scope.press = $sce.trustAsHtml(response);
+					$http.get('/api/solutions').success(function(response){
+						$scope.solutions = $sce.trustAsHtml(response);
 						ngProgressLite.done();
 					});
 				}]
@@ -320,13 +320,13 @@
 (function(){
 
 	angular.module('app')
-		.directive('solutions', function(){
+		.directive('press', function(){
 			return {
 				restrict: "A",
 				controller: ['$scope', '$http', '$sce', 'ngProgressLite', function($scope, $http, $sce, ngProgressLite){
 					ngProgressLite.start();
-					$http.get('/api/solutions').success(function(response){
-						$scope.solutions = $sce.trustAsHtml(response);
+					$http.get('/api/press').success(function(response){
+						$scope.press = $sce.trustAsHtml(response);
 						ngProgressLite.done();
 					});
 				}]

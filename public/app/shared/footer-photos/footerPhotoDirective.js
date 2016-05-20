@@ -8,7 +8,9 @@
 					$http.get('/api/footerphotos').success(function(response){
 						$scope.photos = response;
 					});
-				}]
+					// $('.image-link').magnificPopup({type:'image'});
+
+				}],
 			}
 		})
 

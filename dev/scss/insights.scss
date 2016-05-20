@@ -13,9 +13,13 @@
 		> *:not(.sidebar) {
 			flex: 1;
 		}
+		
 		div {
 			ul.topics {
-
+				margin: 0 0 $space*4;
+				h2 {
+					margin: $space*4 0 $space;
+				}
 				li {
 					list-style-type: circle;
 					margin: 0 0 0 $space*1.2;
@@ -32,6 +36,7 @@
 				width: 50%;
 				img {
 					width: 100%;
+					cursor: pointer;
 				}
 			}
 			

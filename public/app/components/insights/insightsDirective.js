@@ -10,8 +10,17 @@
 						$scope.insights = $sce.trustAsHtml(response);
 						ngProgressLite.done();
 					});
-				}]
-			}
+				}],
+				link: function(scope, element, attrs) {
+					$(element).magnificPopup({
+						delegate: 'a.image-popup', // child items selector, by clicking on it popup will open
+						type: 'image',
+						gallery: {
+							enabled:true
+						}
+					});
+				}
+ 			}
 		})
 
 })();

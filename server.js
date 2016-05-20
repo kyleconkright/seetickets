@@ -38,6 +38,11 @@ app.get('/api/insights', function(req, res) {
 });
 
 
+app.get('/api/press', function(req, res) {
+	request(url+'press.html').pipe(res);
+});
+
+
 app.get('/api/partners', function(req, res) {
 	request.get(url+'partners.json', function (error, response, body) {
 	    if (!error && response.statusCode == 200) {

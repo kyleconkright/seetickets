@@ -20,6 +20,9 @@
 			.when('/partners', {
 				templateUrl: 'app/components/partners/index.html'
 			})
+			.when('/press', {
+				templateUrl: 'app/components/press/index.html'
+			})
 			.when('/contact', {
 				templateUrl: 'app/components/contact/index.html'
 			})

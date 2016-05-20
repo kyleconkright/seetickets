@@ -19,7 +19,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		@include tablet {
-			flex-direction: column;
+			display: block;
 		}
 		div {
 			flex: 1;

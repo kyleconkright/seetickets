@@ -81,13 +81,15 @@ app.get('/api/didyouknow', function(req, res) {
 });
 
 app.get('/api/footerphotos', function(req, res) {
-	request.get(url+'footerphotos.json', function (error, response, body) {
+	request.get(url+'footer-photos.json', function (error, response, body) {
 	    if (!error && response.statusCode == 200) {
-	        var footerphotos = JSON.parse(body);
-	        for(var i in footerphotos) {
-				footerphotos[i] = url+'footerphotos/'+footerphotos[i];
+	        var data = JSON.parse(body);
+	        for(var i in data) {
+	        	for(var j in data[i]) {
+					data[i][j] = url+'footerphotos/'+data[i][j];
+	        	}
 			}
-	        res.json(footerphotos);
+	        res.json(data);
 	    }
 	});
 });

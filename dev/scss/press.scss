@@ -1,0 +1,10 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+
+
+.container.press{
+	p {
+		margin: 0 0 $space*1.5;
+	}
+}

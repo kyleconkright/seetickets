@@ -1,6 +1,6 @@
 (function () {
 
-	angular.module('app', ['ngRoute','ngProgressLite','ngAnimate']);
+	angular.module('app', ['ngRoute','ngProgressLite','ngAnimate','ngSanitize']);
 
 })();
 (function () {
@@ -159,8 +159,12 @@
 		.directive('about', function(){
 			return {
 				restrict: "A",
-				controller: ['$scope', 'ngProgressLite', function($scope, ngProgressLite){
-					$scope.about = 'hello';
+				controller: ['$scope', '$http', '$sce', 'ngProgressLite', function($scope, $http, $sce, ngProgressLite){
+					ngProgressLite.start();
+					$http.get('/api/about').success(function(response){
+						$scope.about = $sce.trustAsHtml(response);
+						ngProgressLite.done();
+					});
 				}]
 			}
 		})
@@ -239,6 +243,23 @@
 (function(){
 
 	angular.module('app')
+		.directive('press', function(){
+			return {
+				restrict: "A",
+				controller: ['$scope', '$http', '$sce', 'ngProgressLite', function($scope, $http, $sce, ngProgressLite){
+					ngProgressLite.start();
+					$http.get('/api/press').success(function(response){
+						$scope.press = $sce.trustAsHtml(response);
+						ngProgressLite.done();
+					});
+				}]
+			}
+		})
+
+})();
+(function(){
+
+	angular.module('app')
 		.directive('partners', function(){
 			return {
 				restrict: "A",
@@ -293,23 +314,6 @@
 			}
 		})
 
-
-})();
-(function(){
-
-	angular.module('app')
-		.directive('press', function(){
-			return {
-				restrict: "A",
-				controller: ['$scope', '$http', '$sce', 'ngProgressLite', function($scope, $http, $sce, ngProgressLite){
-					ngProgressLite.start();
-					$http.get('/api/press').success(function(response){
-						$scope.press = $sce.trustAsHtml(response);
-						ngProgressLite.done();
-					});
-				}]
-			}
-		})
 
 })();
 (function(){
